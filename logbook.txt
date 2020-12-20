@@ -1,0 +1,82 @@
+Anggota Tim:
+- Richard (171112542)
+- Steven (171110614)
+
+
+Gaboot! 
+Gaboot! adalah platform pembelajaran yang berbasis kuis yang ditujukan sebagai sarana edukasi dengan memanfaatkan kemampuan kognitif dari suatu individu dalam menjawab pertanyaan dengan cepat dan tepat.
+
+Backlog
+1. Login
+Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dapat untuk membuat dan mengakses pertanyaan yang saya buat.
+Definition of done:
+- Terdapat halaman login
+- Dapat terautentikasi dengan benar
+
+2. Membuat pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Terdapat halaman membuat pertanyaan beserta jawabannya
+- Pertanyaan yang dibuat telah disimpan dengan benar
+
+3. Mengedit pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan yang di-edit telah disimpan dengan benar
+
+4. Menghapus pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan telah dihapus dengan benar
+
+Sprint
+Iterasi ke-1:
+1. Login
+Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dapat untuk membuat dan mengakses pertanyaan yang saya buat.
+Definition of done:
+- Terdapat halaman login
+- Dapat terautentikasi dengan benar
+Member: Richard, Steven
+
+2. Membuat pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Terdapat halaman membuat pertanyaan beserta jawabannya
+- Pertanyaan yang dibuat telah disimpan dengan benar
+
+3. Mengedit pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan yang di-edit telah disimpan dengan benar
+
+4. Menghapus pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan telah dihapus dengan benar
+
+Hari ke-1 (20 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Penambahan konfigurasi Firebase dalam projek
+- Pembuatan UI halaman login
+- Inisialisasi projek Bespoke
+Yang akan dikerjakan besok:
+- Halaman join menggunakan ID
+- Penetapan styling
+- Status dan message login
+Masalah yang dihadapi:
+- Versi package npm Bespoke yang tidak kompatibel dengan dependency dengan versi terbaru
+
+Steven:
+Yang dikerjakan hari ini:
+- Konfigurasi Firebase Auth
+- Implementasi Firebase Auth pada projek
+- Penambahan tombol play pada halaman Login
+Yang akan dikerjakan besok:
+- Pembuatan UI halaman membuat pertanyaan
+Masalah yang dihadapi:
+- Diperlukan styling library (css) untuk memperbagus aksi dan transisi halaman
