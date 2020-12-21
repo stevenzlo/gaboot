@@ -107,210 +107,60 @@ aside[role=note] {
 aside[role=notes] {
 	display: none;
 }
-.title {
+[class$="title"] {
 	font-family: 'Mountains of Christmas', cursive;
 	font-size: 4em;
 }
 .rainbow-bg {
 	animation: rainbow-bg 30s linear;
     animation-iteration-count: infinite;
+}  
+@keyframes rainbow-bg {
+	100%, 0% {
+		background-color: #f00;
+	}
+
+	8% {
+		background-color: #db6e00;
+	}
+
+	16% {
+		background-color: rgb(231, 208, 0);
+	}
+
+	25% {
+		background-color: #72e400;
+	}
+
+	33% {
+		background-color: rgb(0, 212, 0);
+	}
+
+	41% {
+		background-color: #00c261;
+	}
+
+	50% {
+		background-color: rgb(0, 194, 194);
+	}
+
+	58% {
+		background-color: #007fff;
+	}
+
+	66% {
+		background-color: #00f;
+	}
+
+	75% {
+		background-color: #7f00ff;
+	}
+
+	83% {
+		background-color: rgb(214, 0, 214);
+	}
+
+	91% {
+		background-color: #ff007f;
+	}
 }
-@-moz-keyframes rainbow-bg {
-	100%, 0% {
-	  background-color: #f00;
-	}
-  
-	8% {
-	  background-color: #ff7f00;
-	}
-  
-	16% {
-	  background-color: #ff0;
-	}
-  
-	25% {
-	  background-color: #7fff00;
-	}
-  
-	33% {
-	  background-color: #0f0;
-	}
-  
-	41% {
-	  background-color: #00ff7f;
-	}
-  
-	50% {
-	  background-color: #0ff;
-	}
-  
-	58% {
-	  background-color: #007fff;
-	}
-  
-	66% {
-	  background-color: #00f;
-	}
-  
-	75% {
-	  background-color: #7f00ff;
-	}
-  
-	83% {
-	  background-color: #f0f;
-	}
-  
-	91% {
-	  background-color: #ff007f;
-	}
-  }
-  
-  @-webkit-keyframes rainbow-bg {
-	100%, 0% {
-	  background-color: #f00;
-	}
-  
-	8% {
-	  background-color: #ff7f00;
-	}
-  
-	16% {
-	  background-color: #ff0;
-	}
-  
-	25% {
-	  background-color: #7fff00;
-	}
-  
-	33% {
-	  background-color: #0f0;
-	}
-  
-	41% {
-	  background-color: #00ff7f;
-	}
-  
-	50% {
-	  background-color: #0ff;
-	}
-  
-	58% {
-	  background-color: #007fff;
-	}
-  
-	66% {
-	  background-color: #00f;
-	}
-  
-	75% {
-	  background-color: #7f00ff;
-	}
-  
-	83% {
-	  background-color: #f0f;
-	}
-  
-	91% {
-	  background-color: #ff007f;
-	}
-  }
-  
-  @-o-keyframes rainbow-bg {
-	100%, 0% {
-	  background-color: #f00;
-	}
-  
-	8% {
-	  background-color: #ff7f00;
-	}
-  
-	16% {
-	  background-color: #ff0;
-	}
-  
-	25% {
-	  background-color: #7fff00;
-	}
-  
-	33% {
-	  background-color: #0f0;
-	}
-  
-	41% {
-	  background-color: #00ff7f;
-	}
-  
-	50% {
-	  background-color: #0ff;
-	}
-  
-	58% {
-	  background-color: #007fff;
-	}
-  
-	66% {
-	  background-color: #00f;
-	}
-  
-	75% {
-	  background-color: #7f00ff;
-	}
-  
-	83% {
-	  background-color: #f0f;
-	}
-  
-	91% {
-	  background-color: #ff007f;
-	}
-  }
-  
-  @keyframes rainbow-bg {
-	100%, 0% {
-	  background-color: #f00;
-	}
-  
-	8% {
-	  background-color: #ff7f00;
-	}
-  
-	16% {
-	  background-color: #ff0;
-	}
-  
-	25% {
-	  background-color: #7fff00;
-	}
-  
-	33% {
-	  background-color: #0f0;
-	}
-  
-	41% {
-	  background-color: #00ff7f;
-	}
-  
-	50% {
-	  background-color: #0ff;
-	}
-  
-	58% {
-	  background-color: #007fff;
-	}
-  
-	66% {
-	  background-color: #00f;
-	}
-  
-	75% {
-	  background-color: #7f00ff;
-	}
-  
-	83% {
-	  background-color: #f0f;
-	}
-  
-	91% {
-	  background-color: #ff007f;
-	}
-  }

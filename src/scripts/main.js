@@ -9,12 +9,14 @@ var multimedia = require('bespoke-multimedia');
 var extern = require('bespoke-extern');
 var firebaseConfig = require('./firebase-config');
 var firebaseUi = require('./firebase-ui');
+var join = require('./join');
+var login = require('./login');
 
 firebaseConfig.run();
 firebaseUi.run();
 
 // Bespoke.js
-bespoke.from({ parent: 'article.deck', slides: 'section' }, [
+var deck = bespoke.from({ parent: 'article.deck', slides: 'section' }, [
   classes(),
   nav(),
   scale(),
@@ -23,3 +25,6 @@ bespoke.from({ parent: 'article.deck', slides: 'section' }, [
   multimedia(),
   extern(bespoke)
 ]);
+
+join.run(deck);
+login.run(deck);

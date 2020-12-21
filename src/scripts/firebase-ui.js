@@ -1,13 +1,22 @@
 function run() {
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
     var uiConfig = {
-        signInSuccessUrl: `${window.location.origin}`,
+        callbacks: {
+            signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+                document.querySelector('#login__message-login--success').style.display = 'block'
+                return true;
+            },
+            uiShown: function() {
+                document.querySelector('#join__loader').style.display = 'none';
+            }
+        },
+        signInSuccessUrl: `https://gaboot-58816.web.app/#dashboard`,
         signInOptions: [
             firebase.auth.GoogleAuthProvider.PROVIDER_ID
         ]
     };
 
-    ui.start('#firebaseui-auth-container', uiConfig);
+    ui.start('#login__firebaseui-auth-container', uiConfig);
 }
 
 module.exports = {

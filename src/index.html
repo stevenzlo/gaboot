@@ -14,16 +14,31 @@
   <body>
     <article class="deck">
       <section id="join" class="rainbow-bg">
-        <h1 class="title">Gaboot!</h1>
+        <header>
+          <button id="join__login-button">
+            Login to make quiz
+          </button>
+        </header>
+        <h1 class="join__title">Gaboot!</h1>
+        <input type="text" placeholder="#hashid" maxlength="6" minlength="6" />
         <button class="mdc-button mdc-button--raised">
           <span class="mdc-button__label">Play now!</span>
         </button>
       </section>
 
       <section id="login" class="rainbow-bg">
-        <h1 class="title">Gaboot!</h1>
-        <button id="play">Play</button>
-        <div id="firebaseui-auth-container"></div>
+        <header>
+          <button id="login__join-button">
+            Join quiz as a guest
+          </button>
+        </header>
+        <h1 class="login__title">Gaboot!</h1>
+        <div id="login__firebaseui-auth-container"></div>
+        <div id="login__message-login--success" style="display: none;">Sign in success, redirecting...</div>
+      </section>
+
+      <section id="dashboard">
+        <h1 class="dashboard__title">Gaboot Dashboard!</h1>
       </section>
 
       <!-- <section>
