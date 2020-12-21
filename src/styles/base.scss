@@ -1,0 +1,316 @@
+* {
+	box-sizing: inherit;
+	&::before {
+		box-sizing: inherit;
+	}
+	&::after {
+		box-sizing: inherit;
+	}
+}
+html {
+	box-sizing: border-box;
+	font-size: 'Open Sans', sans-serif;
+}
+p {
+	line-height: 1.6;
+	margin: 0 0 1rem 0;
+}
+li {
+	line-height: 1.6;
+}
+ul {
+	padding: 0 0 0 20px;
+}
+ol {
+	padding: 0 0 0 20px;
+}
+figure {
+	margin: 0;
+}
+img {
+	vertical-align: middle;
+}
+video {
+	vertical-align: middle;
+}
+.deck {
+	overflow: hidden;
+	font-feature-settings: "kern" 1;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	&:not(.bespoke-parent) {
+		display: none;
+	}
+	section {
+		&:not(.bespoke-slide) {
+			display: none;
+		}
+	}
+}
+.bespoke-parent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.bespoke-scale-parent {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	pointer-events: none;
+}
+.bespoke-slide {
+	pointer-events: none;
+	overflow: hidden;
+	opacity: 0;
+	background-color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 640px;
+	margin-left: -320px;
+	height: 480px;
+	margin-top: -240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	transition: opacity 200ms ease-in-out 150ms;
+}
+.bespoke-active {
+	pointer-events: auto;
+	opacity: 1;
+	z-index: 1;
+}
+.bespoke-inactive {
+	transition-delay: 0;
+}
+.bespoke-bullet {
+	transition: opacity 200ms ease-in-out;
+}
+.bespoke-bullet-inactive {
+	visibility: hidden;
+}
+.emphatic {
+	background-color: #222;
+}
+.emphatic-text {
+	color: #fff;
+}
+aside[role=note] {
+	display: none;
+}
+aside[role=notes] {
+	display: none;
+}
+.title {
+	font-family: 'Mountains of Christmas', cursive;
+	font-size: 4em;
+}
+.rainbow-bg {
+	animation: rainbow-bg 30s linear;
+    animation-iteration-count: infinite;
+}
+@-moz-keyframes rainbow-bg {
+	100%, 0% {
+	  background-color: #f00;
+	}
+  
+	8% {
+	  background-color: #ff7f00;
+	}
+  
+	16% {
+	  background-color: #ff0;
+	}
+  
+	25% {
+	  background-color: #7fff00;
+	}
+  
+	33% {
+	  background-color: #0f0;
+	}
+  
+	41% {
+	  background-color: #00ff7f;
+	}
+  
+	50% {
+	  background-color: #0ff;
+	}
+  
+	58% {
+	  background-color: #007fff;
+	}
+  
+	66% {
+	  background-color: #00f;
+	}
+  
+	75% {
+	  background-color: #7f00ff;
+	}
+  
+	83% {
+	  background-color: #f0f;
+	}
+  
+	91% {
+	  background-color: #ff007f;
+	}
+  }
+  
+  @-webkit-keyframes rainbow-bg {
+	100%, 0% {
+	  background-color: #f00;
+	}
+  
+	8% {
+	  background-color: #ff7f00;
+	}
+  
+	16% {
+	  background-color: #ff0;
+	}
+  
+	25% {
+	  background-color: #7fff00;
+	}
+  
+	33% {
+	  background-color: #0f0;
+	}
+  
+	41% {
+	  background-color: #00ff7f;
+	}
+  
+	50% {
+	  background-color: #0ff;
+	}
+  
+	58% {
+	  background-color: #007fff;
+	}
+  
+	66% {
+	  background-color: #00f;
+	}
+  
+	75% {
+	  background-color: #7f00ff;
+	}
+  
+	83% {
+	  background-color: #f0f;
+	}
+  
+	91% {
+	  background-color: #ff007f;
+	}
+  }
+  
+  @-o-keyframes rainbow-bg {
+	100%, 0% {
+	  background-color: #f00;
+	}
+  
+	8% {
+	  background-color: #ff7f00;
+	}
+  
+	16% {
+	  background-color: #ff0;
+	}
+  
+	25% {
+	  background-color: #7fff00;
+	}
+  
+	33% {
+	  background-color: #0f0;
+	}
+  
+	41% {
+	  background-color: #00ff7f;
+	}
+  
+	50% {
+	  background-color: #0ff;
+	}
+  
+	58% {
+	  background-color: #007fff;
+	}
+  
+	66% {
+	  background-color: #00f;
+	}
+  
+	75% {
+	  background-color: #7f00ff;
+	}
+  
+	83% {
+	  background-color: #f0f;
+	}
+  
+	91% {
+	  background-color: #ff007f;
+	}
+  }
+  
+  @keyframes rainbow-bg {
+	100%, 0% {
+	  background-color: #f00;
+	}
+  
+	8% {
+	  background-color: #ff7f00;
+	}
+  
+	16% {
+	  background-color: #ff0;
+	}
+  
+	25% {
+	  background-color: #7fff00;
+	}
+  
+	33% {
+	  background-color: #0f0;
+	}
+  
+	41% {
+	  background-color: #00ff7f;
+	}
+  
+	50% {
+	  background-color: #0ff;
+	}
+  
+	58% {
+	  background-color: #007fff;
+	}
+  
+	66% {
+	  background-color: #00f;
+	}
+  
+	75% {
+	  background-color: #7f00ff;
+	}
+  
+	83% {
+	  background-color: #f0f;
+	}
+  
+	91% {
+	  background-color: #ff007f;
+	}
+  }

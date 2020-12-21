@@ -7,11 +7,21 @@
     <link rel="stylesheet" type="text/css" href="build/build.css">
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
     <article class="deck">
-      <section class="login">
-        <h1>Gaboot!</h1>
+      <section id="join" class="rainbow-bg">
+        <h1 class="title">Gaboot!</h1>
+        <button class="mdc-button mdc-button--raised">
+          <span class="mdc-button__label">Play now!</span>
+        </button>
+      </section>
+
+      <section id="login" class="rainbow-bg">
+        <h1 class="title">Gaboot!</h1>
         <button id="play">Play</button>
         <div id="firebaseui-auth-container"></div>
       </section>

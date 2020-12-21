@@ -9,6 +9,7 @@ var pkg = require('./package.json'),
   del = require('del'),
   ghpages = require('gh-pages'),
   gulp = require('gulp'),
+  sass = require('gulp-dart-sass'),
   gutil = require('gulp-util'),
   path = require('path'),
   plumber = require('gulp-plumber'),
@@ -46,9 +47,9 @@ gulp.task('html', ['clean:html'], function() {
 });
 
 gulp.task('css', ['clean:css'], function() {
-  return gulp.src('src/styles/main.styl')
+  return gulp.src('src/styles/main.scss')
     .pipe(isDist ? through() : plumber())
-    .pipe(stylus({ 'include css': true, paths: ['./node_modules'] }))
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: false }))
     .pipe(isDist ? csso() : through())
     .pipe(rename('build.css'))
@@ -99,7 +100,7 @@ gulp.task('connect', ['build'], function() {
 gulp.task('watch', function() {
   gulp.watch('src/**/*.html', ['html']);
   gulp.watch('src/scripts/**/*.js', ['js']);
-  gulp.watch('src/styles/**/*.styl', ['css']);
+  gulp.watch('src/styles/**/*.scss', ['css']);
   gulp.watch('src/images/**/*', ['images']);
   gulp.watch('src/fonts/*', ['fonts']);
 });

@@ -34,9 +34,12 @@
     "node": ">=4.2.0"
   },
   "dependencies": {
+    "@material/button": "^8.0.0",
     "@material/top-app-bar": "^8.0.0",
     "babel-core": "^6.26.3",
     "firebase": "^8.2.1",
-    "firebaseui": "^4.7.1"
+    "firebaseui": "^4.7.1",
+    "gulp-dart-sass": "^1.0.2",
+    "sass": "^1.25.0"
   }
 }
