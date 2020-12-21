@@ -80,3 +80,27 @@ Yang akan dikerjakan besok:
 - Pembuatan UI halaman membuat pertanyaan
 Masalah yang dihadapi:
 - Diperlukan styling library (css) untuk memperbagus aksi dan transisi halaman
+
+Hari ke-2 (21 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Pengubahan file Stylus menjadi SCSS
+- Deploy web app ke Firebase Hosting
+- Redirection setelah login berhasil dilakukan
+- Penambahan halaman untuk join kuis
+Yang akan dikerjakan besok:
+- Integrasi MDC menggunakan Webpack
+- Penggunaan MDC untuk styling
+- Pembuatan halaman dashboard pembuat kuis
+Masalah yang dihadapi:
+- Perlu di-update-nya penggunaan Gulp menjadi Webpack agar dapat menggunakan MDC
+
+Steven:
+Yang dikerjakan hari ini:
+- Uninstall gulp
+- Clear dependency yang tidak digunakan
+- Konfigurasi webpack
+Yang akan dikerjakan besok:
+- Pembuatan UI halaman membuat pertanyaan
+Masalah yang dihadapi:
+--
