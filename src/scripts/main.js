@@ -12,19 +12,23 @@ var firebaseUi = require('./firebase-ui');
 var join = require('./join');
 var login = require('./login');
 
-firebaseConfig.run();
-firebaseUi.run();
+const main = () => {
+  firebaseConfig.run();
+  firebaseUi.run();
 
-// Bespoke.js
-var deck = bespoke.from({ parent: 'article.deck', slides: 'section' }, [
-  classes(),
-  nav(),
-  scale(),
-  bullets('.build, .build-items > *:not(.build-items)'),
-  hash(),
-  multimedia(),
-  extern(bespoke)
-]);
+  // Bespoke.js
+  var deck = bespoke.from({ parent: 'article.deck', slides: 'section' }, [
+    classes(),
+    nav(),
+    scale(),
+    bullets('.build, .build-items > *:not(.build-items)'),
+    hash(),
+    multimedia(),
+    extern(bespoke)
+  ]);
 
-join.run(deck);
-login.run(deck);
+  join.run(deck);
+  login.run(deck);
+}
+
+export default main;
