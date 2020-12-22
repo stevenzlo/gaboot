@@ -104,3 +104,22 @@ Yang akan dikerjakan besok:
 - Pembuatan UI halaman membuat pertanyaan
 Masalah yang dihadapi:
 --
+
+Hari ke-2 (21 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Integrasi MDC menggunakan Webpack
+- Penggunaan MDC untuk styling
+Yang akan dikerjakan besok:
+- Pembuatan halaman dashboard pembuat kuis
+- Kustomisasi tema MDC
+Masalah yang dihadapi:
+- Kustomisasi tema MDC
+
+Steven:
+Yang dikerjakan hari ini:
+- Membuat kerangka dasar UI halaman membuat pertanyaan (list quiz)
+Yang akan dikerjakan besok:
+- Melanjutkan UI halaman membuat pertanyaan (list quiz)
+Masalah yang dihadapi:
+- Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
