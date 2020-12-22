@@ -5,9 +5,6 @@ function run() {
 			signInSuccessWithAuthResult: function(authResult, redirectUrl) {
 				document.querySelector('#login__message-login--success').style.display = 'block'
 				return true;
-			},
-			uiShown: function() {
-				document.querySelector('#join__loader').style.display = 'none';
 			}
 		},
 		signInSuccessUrl: `${window.location.origin}/#dashboard`,

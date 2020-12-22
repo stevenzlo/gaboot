@@ -1,3 +1,19 @@
+$primary: #333333;
+$on-primary: #fff;
+
+@use "@material/theme" with (
+    $primary: $primary,
+    $on-primary: $on-primary
+);
+
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
+@use "@material/textfield";
+@use "@material/button";
+@include button.core-styles;
+@include textfield.core-styles;
 @import "normalizecss/normalize.css";
 @import "./base";
 @import "./user";

@@ -1,5 +1,26 @@
 #join {
+    position: relative;
     .title {
         color: #fff;
+    }
+    #join__login-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1em;
+        * {
+            font-size: 0.75em;
+            color: #fff;
+        }
+    }
+    main {
+        width: 30%;
+        &> * {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .mdc-text-field {
+            text-align: center;
+        }
     }
 }

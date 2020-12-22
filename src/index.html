@@ -13,27 +13,35 @@
   <body>
     <article class="deck">
       <section id="join" class="rainbow-bg">
-        <header>
-          <button id="join__login-button">
-            Login to make quiz
-          </button>
-        </header>
         <h1 class="join__title">Gaboot!</h1>
-        <input type="text" placeholder="#hashid" maxlength="6" minlength="6" />
-        <button class="mdc-button mdc-button--raised">
-          <span class="mdc-button__label">Play now!</span>
+        <button id="join__login-button" class="mdc-button">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Login to Make Quiz</span>
         </button>
+        <main>
+          <label class="mdc-text-field mdc-text-field--filled">
+            <span class="mdc-text-field__ripple"></span>
+            <span class="mdc-floating-label">Game PIN</span>
+            <input class="mdc-text-field__input" type="text" maxlength="6" minlength="6">
+            <span class="mdc-line-ripple"></span>
+          </label>
+          <button class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Play now!</span>
+          </button>
+        </main>
       </section>
 
       <section id="login" class="rainbow-bg">
-        <header>
-          <button id="login__join-button">
-            Join quiz as a guest
-          </button>
-        </header>
         <h1 class="login__title">Gaboot!</h1>
-        <div id="login__firebaseui-auth-container"></div>
-        <div id="login__message-login--success" style="display: none;">Sign in success, redirecting...</div>
+        <button id="login__join-button" class="mdc-button">
+          <div class="mdc-button__ripple"></div>
+          <span class="mdc-button__label">Join Quiz</span>
+        </button>
+        <main>
+          <p>Sign in to make quiz</p>
+          <div id="login__firebaseui-auth-container"></div>
+          <div id="login__message-login--success" style="display: none;">Sign in success, redirecting...</div>
+        </main>
       </section>
 
       <section id="dashboard">

@@ -2,4 +2,24 @@
   .title {
     color: #fff;
   }
+  #login__join-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1em;
+    * {
+        font-size: 0.75em;
+        color: #fff;
+    }
+  }
+  main {
+    text-align: center;
+    color: $on-primary;
+    .firebaseui-idp-button {
+      background-color: $primary !important;
+    }
+    .firebaseui-idp-google > .firebaseui-idp-text {
+      color: $on-primary;
+    }
+  }
 }
