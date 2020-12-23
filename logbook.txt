@@ -158,3 +158,13 @@ Yang akan dikerjakan besok:
 - Halaman untuk menambah pertanyaan beserta jawabannya
 Masalah yang dihadapi:
 - -
+
+Steven:
+Yang dikerjakan hari ini:
+- Membuat kerangka UI pembuatan quiz
+- Update styling list quiz sesuai dengan dashboard
+Yang akan dikerjakan besok:
+- Update tabel list quiz
+- Konfigurasi firestore untuk retrieve data quiz
+Masalah yang dihadapi:
+- Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanj
