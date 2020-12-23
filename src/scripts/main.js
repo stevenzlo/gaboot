@@ -12,6 +12,8 @@ var firebaseUi = require('./firebase-ui');
 var join = require('./join');
 var login = require('./login');
 var dashboard = require('./dashboard');
+var createQuiz = require('./create-quiz');
+var quizList = require('./quiz-list');
 
 const main = () => {
   firebaseConfig.run();
@@ -31,6 +33,8 @@ const main = () => {
   join.run(deck);
   login.run(deck);
   dashboard.run(deck);
+  createQuiz.run(deck);
+  quizList.run(deck);
 }
 
 export default main;
