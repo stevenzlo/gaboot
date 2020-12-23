@@ -1,6 +1,8 @@
+@use "@material/textfield";
+
 #join {
     position: relative;
-    .title {
+    [class$="title"] {
         color: #fff;
     }
     #join__login-button {
@@ -18,9 +20,6 @@
         &> * {
             width: 100%;
             margin-bottom: 10px;
-        }
-        .mdc-text-field {
-            text-align: center;
         }
     }
 }

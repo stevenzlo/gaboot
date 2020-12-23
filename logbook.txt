@@ -12,24 +12,40 @@ Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dap
 Definition of done:
 - Terdapat halaman login
 - Dapat terautentikasi dengan benar
+Estimasi waktu: 3 hari
 
 2. Membuat pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
 Definition of done:
-- Terdapat halaman membuat pertanyaan beserta jawabannya
 - Pertanyaan yang dibuat telah disimpan dengan benar
+- Terdapat halaman untuk memulai membuat pertanyaan
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya
+Estimasi waktu: 6 hari
 
 3. Mengedit pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
 Definition of done:
 - Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan yang di-edit telah disimpan dengan benar
+Estimasi waktu: 1 hari
 
 4. Menghapus pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
 Definition of done:
 - Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan telah dihapus dengan benar
+Estimasi waktu: 1 hari
+
+5. Mengikuti quiz
+Sebagai seorang pengambil quiz, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti quiz dengan baik
+Definition of done:
+- Terdapat halaman untuk memasukkan ID quiz untuk memasuki halaman tunggu
+- Terdapat halaman tunggu ketika quiz belum dimulai
+- Pertanyaan ditampilkan dengan benar ketika quiz dimulai
+- Jawaban dapat dipilih
+- Jawaban direkam dengan benar
+- Jawaban benar ditampilkan
+Estimasi waktu: 6 hari
 
 Sprint
 Iterasi ke-1:
@@ -105,7 +121,7 @@ Yang akan dikerjakan besok:
 Masalah yang dihadapi:
 --
 
-Hari ke-2 (21 Desember 2020):
+Hari ke-3 (22 Desember 2020):
 Richard:
 Yang dikerjakan hari ini:
 - Integrasi MDC menggunakan Webpack
@@ -123,3 +139,22 @@ Yang akan dikerjakan besok:
 - Melanjutkan UI halaman membuat pertanyaan (list quiz)
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
+
+Sprint
+Iterasi ke-2:
+1. Membuat pertanyaan
+Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Pertanyaan yang dibuat telah disimpan dengan benar
+- Terdapat halaman untuk memulai membuat pertanyaan
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya
+
+Hari ke-1 (23 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Pembuatan halaman dashboard pembuat kuis
+- Kustomisasi tema MDC
+Yang akan dikerjakan besok:
+- Halaman untuk menambah pertanyaan beserta jawabannya
+Masalah yang dihadapi:
+- -

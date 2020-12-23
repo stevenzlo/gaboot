@@ -1,6 +1,8 @@
+@use "@material/button";
+@use "@material/textfield";
+
 * {
 	box-sizing: inherit;
-	font-size: 12px;
 	&::before {
 		box-sizing: inherit;
 	}
@@ -9,6 +11,7 @@
 	}
 }
 html {
+	font-size: 12px;
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -109,14 +112,22 @@ aside[role=notes] {
 	display: none;
 }
 [class$="title"] {
-	color: #fff;
 	font-family: 'Mountains of Christmas', cursive;
 	font-size: 4em;
+}
+[class="bolded"] {
+	font-weight: bolder;
 }
 .rainbow-bg {
 	animation: rainbow-bg 30s linear;
     animation-iteration-count: infinite;
-}  
+}
+.mdc-button {
+	@include button.height($button-height);
+}
+.mdc-text-field--filled {
+	@include textfield.height(54px);
+}
 @keyframes rainbow-bg {
 	100%, 0% {
 		background-color: #f00;

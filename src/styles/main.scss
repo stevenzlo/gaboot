@@ -1,5 +1,6 @@
 $primary: #333333;
 $on-primary: #fff;
+$button-height: 30px;
 
 @use "@material/theme" with (
     $primary: $primary,
@@ -13,12 +14,15 @@ $on-primary: #fff;
 @use "@material/textfield";
 @use "@material/button";
 @use "@material/data-table/data-table";
+@use "@material/card";
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;
+@include card.core-styles;
 @import "normalizecss/normalize.css";
 @import "./base";
 @import "./user";
 @import "./login";
 @import "./join";
+@import "./dashboard";
 @import "./quiz-list";

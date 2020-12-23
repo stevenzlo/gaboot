@@ -11,6 +11,7 @@ var firebaseConfig = require('./firebase-config');
 var firebaseUi = require('./firebase-ui');
 var join = require('./join');
 var login = require('./login');
+var dashboard = require('./dashboard');
 
 const main = () => {
   firebaseConfig.run();
@@ -29,6 +30,7 @@ const main = () => {
 
   join.run(deck);
   login.run(deck);
+  dashboard.run(deck);
 }
 
 export default main;
