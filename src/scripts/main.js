@@ -14,6 +14,7 @@ var login = require('./login');
 var dashboard = require('./dashboard');
 var createQuiz = require('./create-quiz');
 var quizList = require('./quiz-list');
+require('firebase/firestore');
 
 const main = () => {
   firebaseConfig.run();

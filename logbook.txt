@@ -59,8 +59,9 @@ Member: Richard, Steven
 2. Membuat pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
 Definition of done:
-- Terdapat halaman membuat pertanyaan beserta jawabannya
 - Pertanyaan yang dibuat telah disimpan dengan benar
+- Terdapat halaman untuk memulai membuat pertanyaan
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya
 
 3. Mengedit pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
@@ -134,11 +135,42 @@ Masalah yang dihadapi:
 
 Steven:
 Yang dikerjakan hari ini:
-- Membuat kerangka dasar UI halaman membuat pertanyaan (list quiz)
+- Membuat kerangka UI pembuatan quiz
+- Update styling list quiz sesuai dengan dashboard
 Yang akan dikerjakan besok:
-- Melanjutkan UI halaman membuat pertanyaan (list quiz)
+- Update tabel list quiz
+- Konfigurasi retrieve data list quiz dari firestore
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
+
+Sprint Review
+Iterasi ke-1:
+1. Login (done)
+Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dapat untuk membuat dan mengakses pertanyaan yang saya buat.
+Definition of done:
+- Terdapat halaman login (done)
+- Dapat terautentikasi dengan benar (done)
+Member: Richard, Steven
+
+2. Membuat pertanyaan (return to backlog)
+Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Pertanyaan yang dibuat telah disimpan dengan benar (not yet)
+- Terdapat halaman untuk memulai membuat pertanyaan (not yet)
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya (not yet)
+Member: Richard, Steven
+
+3. Mengedit pertanyaan (return to backlog)
+Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya (not yet)
+- Pertanyaan yang di-edit telah disimpan dengan benar (not yet)
+
+4. Menghapus pertanyaan (return to backlog)
+Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya (not yet)
+- Pertanyaan telah dihapus dengan benar (not yet)
 
 Sprint
 Iterasi ke-2:
@@ -177,3 +209,14 @@ Yang akan dikerjakan besok:
 - Halaman untuk menambah pertanyaan beserta jawabannya
 Masalah yang dihadapi:
 - -
+
+Steven:
+Yang dikerjakan hari ini:
+- Update styling list quiz
+- Konfigurasi list quiz pada firestore
+- Konfigurasi awal firestore pada halaman list quiz
+Yang akan dikerjakan besok:
+- Update konfigurasi firestore pada halaman list quiz
+- Update tampilan data quiz yang diretrieve dari firestore
+Masalah yang dihadapi:
+- Kurangnya pemahaman mengenai firestore pada web

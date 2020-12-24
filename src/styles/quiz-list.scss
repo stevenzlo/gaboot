@@ -1,12 +1,21 @@
 #quiz-list {
-    #list__create-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 1em;
-      * {
-          font-size: 0.75em;
-          color: #fff;
-      }
+  align-items: initial;
+  justify-content: initial;
+  padding: 16px;
+  .nav-button {
+    display: flex;
+    justify-content: flex-end;
+    * {
+        font-size: 0.75em;
+        color: #fff;
     }
   }
+  .mdc-data-table__cell, .mdc-data-table__header-cell {
+    height: auto;
+    padding: 8px;
+  }
+  h1 {
+    color: #fff;
+    margin: 8px 0;
+  }
+}

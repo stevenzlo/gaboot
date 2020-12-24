@@ -18,6 +18,7 @@ $border-radius: 3px;
 @use "@material/button";
 @use "@material/data-table/data-table";
 @use "@material/card";
+@use "@material/typography/mdc-typography";
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;
