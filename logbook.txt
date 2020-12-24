@@ -167,4 +167,13 @@ Yang akan dikerjakan besok:
 - Update tabel list quiz
 - Konfigurasi firestore untuk retrieve data quiz
 Masalah yang dihadapi:
-- Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanj
+- Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
+
+Hari ke-2 (24 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Bagian kumpulan pertanyaan dari halaman untuk menambah pertanyaan beserta jawabannya
+Yang akan dikerjakan besok:
+- Halaman untuk menambah pertanyaan beserta jawabannya
+Masalah yang dihadapi:
+- -

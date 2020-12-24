@@ -14,10 +14,11 @@ html {
 	font-size: 12px;
 	box-sizing: border-box;
 	font-family: 'Open Sans', sans-serif;
+	background: $background;
 }
 p {
 	line-height: 1.6;
-	margin: 0 0 1rem 0;
+	margin: 0;
 }
 li {
 	line-height: 1.6;

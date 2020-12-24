@@ -1,12 +1,116 @@
+// #create-quiz {
+//     #create__list-button {
+//       position: absolute;
+//       top: 0;
+//       right: 0;
+//       margin: 1em;
+//       * {
+//           font-size: 0.75em;
+//           color: #fff;
+//       }
+//     }
+//   }
+
 #create-quiz {
-    #create__list-button {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin: 1em;
-      * {
+  display: flex;
+  justify-content: column;
+  main {
+    width: 100%;
+    flex-basis: 80%;
+  }
+  aside {
+    width: 100%;
+    background: $on-primary;
+    box-shadow: 0px -5px 8px 0px rgba(97,97,97,0.71);
+    flex-basis: 20%;
+    .create-quiz__list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      height: 100%;
+    }
+    li {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      padding: 8px;
+      flex-basis: 180px;
+      font-size: 9px;
+      .create-quiz__list--left {
+        flex-basis: 12.5%;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        > :first-child {
+          font-weight: bolder;
+        }
+        img {
+          width: 100%;
+          border-radius: 50%;
+          padding: 4px;
+          cursor: pointer;
+          &:hover {
+            background-color: $hover;
+          }
+        }
+      }
+      .create-quiz__list--right {
+        display: flex;
+        flex-basis: 87.5%;
+        flex-direction: column;
+        padding-left: 8px;
+
+        > * {
+          margin: 0;
+        }
+        > :first-child {
+          font-weight: bolder;
+        }
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           font-size: 0.75em;
-          color: #fff;
+          margin-top: 4px;
+          width: 100%;
+          background: $background;
+          border-radius: $border-radius;
+          padding: 4px;
+          flex-grow: 1;
+          font-weight: 300;
+        }
+        &__question {
+          text-align: center;
+        }
+        &__timer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          border-radius: 50%;
+          margin-top: 4px;
+          width: 15px;
+          height: 15px;
+          border: 0.1px solid #dedede;
+        }
+        &__options {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-grow: 1;
+          margin-top: 8px;
+          div {
+            flex-basis: calc(50% - 4px);
+            border: 0.1px solid #dedede;
+            margin-right: 2px;
+            margin-bottom: 2px;
+          }
+        }
       }
     }
   }
+}
