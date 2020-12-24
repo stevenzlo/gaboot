@@ -2,15 +2,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
 const fs = require('fs');
 
-function generateHtmlPlugins(templateDir) {
-  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
-  return templateFiles.map((item) => new HtmlWebpackPlugin({
-    inject: false,
-    filename: `./pages/${item}`,
-    template: path.resolve(__dirname, `${templateDir}/${item}`),
-  }));
-}
-const htmlPlugins = generateHtmlPlugins('./src/pages');
+// function generateHtmlPlugins(templateDir) {
+//   const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir));
+//   return templateFiles.map((item) => new HtmlWebpackPlugin({
+//     inject: false,
+//     filename: `./pages/${item}`,
+//     template: path.resolve(__dirname, `${templateDir}/${item}`),
+//   }));
+// }
+// const htmlPlugins = generateHtmlPlugins('./src/pages');
 
 module.exports = {
   entry: './src/app.js',
@@ -50,5 +50,5 @@ module.exports = {
       filename: 'index.html',
     })
   ]
-    .concat(htmlPlugins)
+    // .concat(htmlPlugins)
 };

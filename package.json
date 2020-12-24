@@ -50,6 +50,7 @@
     "@material/data-table": "^8.0.0",
     "@material/textfield": "^8.0.0",
     "@material/top-app-bar": "^8.0.0",
+    "@material/typography": "^8.0.0",
     "firebase": "^8.2.1",
     "firebaseui": "^4.7.1",
     "regenerator-runtime": "^0.13.7",
