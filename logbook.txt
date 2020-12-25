@@ -232,3 +232,11 @@ Yang akan dikerjakan besok:
 Masalah yang dihadapi:
 - -
 
+Steven:
+Yang dikerjakan hari ini:
+- Update konfigurasi firestore pada halaman list quiz
+- Update tampilan data quiz yang diretrieve dari firestore
+Yang akan dikerjakan besok:
+- Membuat hapus quiz / pertanyaan
+Masalah yang dihadapi:
+- -
