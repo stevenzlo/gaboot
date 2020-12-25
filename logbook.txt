@@ -220,3 +220,15 @@ Yang akan dikerjakan besok:
 - Update tampilan data quiz yang diretrieve dari firestore
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai firestore pada web
+
+Hari ke-3 (25 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Penambahan pertanyaan di bagian kumpulan pertanyaan sudah dapat dilakukan
+- Modifikasi styling list pertanyaan
+- Membuat kerangka untuk mengisi pertanyaan dan pilihan
+Yang akan dikerjakan besok:
+- Memodifikasi styling input untuk mengisi pertanyaan dan pilihan
+Masalah yang dihadapi:
+- -
+

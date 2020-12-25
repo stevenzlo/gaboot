@@ -73,34 +73,28 @@
 
       <section id="create-quiz" class="rainbow-bg">
         <main>
-          Test
+          <input class="create-quiz__input--title" type="text" maxlength="50" placeholder="Type your question" />
+          <div class="create-quiz__input--timer">
+            <img src="./images/hourglass.svg" alt="Timer" />
+            <input type="number" max="120" value="20" />
+          </div>
+          <div class="create-quiz__input--options">
+            <input type="text" maxlength="20" placeholder="Add answer 1">
+            <input type="text" maxlength="20" placeholder="Add answer 2">
+            <input type="text" maxlength="20" placeholder="Add answer 3">
+            <input type="text" maxlength="20" placeholder="Add answer 4">
+          </div>
         </main>
         <aside>
-          <ol class="create-quiz__list">
-            <li>
-              <div class="create-quiz__list--left">
-                <p>1</p>
-                <img src="./images/delete.svg" alt="Delete">
-              </div>
-              <div class="create-quiz__list--right">
-                <p>Quiz</p>
-                <div>
-                  <p class="create-quiz__list--right__question">
-                    Test
-                  </p>
-                  <p class="create-quiz__list--right__timer">
-                    20
-                  </p>
-                  <div class="create-quiz__list--right__options">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </li>
-          </ol>
+          <div> 
+            <ol class="create-quiz__list"></ol>            
+          </div>
+          <div>
+            <button id="create-quiz__add-question-button" class="mdc-button mdc-button--raised">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">+</span>
+            </button>
+          </div>
         </aside>
       </section>
 
