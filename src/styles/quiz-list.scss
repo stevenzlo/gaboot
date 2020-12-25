@@ -10,9 +10,22 @@
         color: #fff;
     }
   }
-  .mdc-data-table__cell, .mdc-data-table__header-cell {
-    height: auto;
-    padding: 8px;
+  .mdc-data-table__table-container {
+    overflow-y: hidden;
+    .mdc-data-table__cell {
+      height: auto;
+      padding: 8px;
+      .mdc-button {
+        padding: 0 8px;
+        height: 20px;
+        min-width: 32px;
+      }
+    }
+    .mdc-data-table__header-cell {
+      text-align: center;
+      height: auto;
+      padding: 8px;
+    }
   }
   h1 {
     color: #fff;
