@@ -8,44 +8,50 @@ Gaboot! adalah platform pembelajaran yang berbasis kuis yang ditujukan sebagai s
 
 Backlog
 1. Login
-Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dapat untuk membuat dan mengakses pertanyaan yang saya buat.
+Sebagai seorang pembuat kuis, saya dapat melakukan login sehingga saya dapat untuk membuat dan mengakses kuis yang saya buat.
 Definition of done:
 - Terdapat halaman login
 - Dapat terautentikasi dengan benar
 Estimasi waktu: 12 jam
 
-2. Membuat pertanyaan
-Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+2. Membuat kuis
+Sebagai seorang pembuat kuis, saya dapat membuat kuis baru sehingga saya dapat menambah kuis beserta pertanyaan yang akan ditampilkan saat kuis berlangsung.
 Definition of done:
-- Pertanyaan yang dibuat telah disimpan dengan benar
-- Terdapat halaman untuk memulai membuat pertanyaan
+- Kuis dan pertanyaan yang dibuat telah disimpan dengan benar
+- Terdapat halaman untuk memulai membuat kuis dan pertanyaan
 - Terdapat halaman untuk menambah pertanyaan beserta jawabannya
 Estimasi waktu: 24 jam
 
-3. Mengedit pertanyaan
-Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+3. Mengedit kuis
+Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
 Definition of done:
-- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan yang di-edit telah disimpan dengan benar
 Estimasi waktu: 4 jam
 
-4. Menghapus pertanyaan
-Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+4. Menghapus kuis
+Sebagai seorang pembuat kuis, saya dapat menghapus kuis yang sudah ada sehingga tampilan tidak dipenuhi kuis yang tidak diperlukan.
 Definition of done:
-- Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
-- Pertanyaan telah dihapus dengan benar
+- Terdapat halaman kuis telah dikonfigurasi sebelumnya
+- Kuis beserta pertanyaan telah dihapus dengan benar
 Estimasi waktu: 4 jam
 
-5. Mengikuti quiz
-Sebagai seorang pengambil quiz, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti quiz dengan baik
+5. Mengikuti kuis
+Sebagai seorang pengambil kuis, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti kuis dengan baik
 Definition of done:
-- Terdapat halaman untuk memasukkan ID quiz untuk memasuki halaman tunggu
-- Terdapat halaman tunggu ketika quiz belum dimulai
-- Pertanyaan ditampilkan dengan benar ketika quiz dimulai
+- Terdapat halaman untuk memasukkan ID kuis untuk memasuki halaman tunggu
+- Terdapat halaman tunggu ketika kuis belum dimulai
+- Pertanyaan ditampilkan dengan benar ketika kuis dimulai
 - Jawaban dapat dipilih
 - Jawaban direkam dengan benar
 - Jawaban benar ditampilkan
 Estimasi waktu: 24 jam
+
+6. Logout
+Sebagai seorang pembuat kuis, saya dapat melakukan logout sehingga saya identitas saya tidak tercatat lagi pada perangkat dan dapat menggunakan identitas lain.
+Definition of done:
+- Terdapat tombol aksi untuk melakukan logout
+- Redirect kembali ke halaman login
 
 Sprint
 Iterasi ke-1:
@@ -135,11 +141,11 @@ Masalah yang dihadapi:
 
 Steven:
 Yang dikerjakan hari ini:
-- Membuat kerangka UI pembuatan quiz
-- Update styling list quiz sesuai dengan dashboard
+- Membuat kerangka UI pembuatan kuis
+- Update styling list kuis sesuai dengan dashboard
 Yang akan dikerjakan besok:
-- Update tabel list quiz
-- Konfigurasi retrieve data list quiz dari firestore
+- Update tabel list kuis
+- Konfigurasi retrieve data list kuis dari firestore
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
 
@@ -193,11 +199,11 @@ Masalah yang dihadapi:
 
 Steven:
 Yang dikerjakan hari ini:
-- Membuat kerangka UI pembuatan quiz
-- Update styling list quiz sesuai dengan dashboard
+- Membuat kerangka UI pembuatan kuis
+- Update styling list kuis sesuai dengan dashboard
 Yang akan dikerjakan besok:
-- Update tabel list quiz
-- Konfigurasi firestore untuk retrieve data quiz
+- Update tabel list kuis
+- Konfigurasi firestore untuk retrieve data kuis
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai MDC (perlu dipelajari lebih lanjut)
 
@@ -212,12 +218,12 @@ Masalah yang dihadapi:
 
 Steven:
 Yang dikerjakan hari ini:
-- Update styling list quiz
-- Konfigurasi list quiz pada firestore
-- Konfigurasi awal firestore pada halaman list quiz
+- Update styling list kuis
+- Konfigurasi list kuis pada firestore
+- Konfigurasi awal firestore pada halaman list kuis
 Yang akan dikerjakan besok:
-- Update konfigurasi firestore pada halaman list quiz
-- Update tampilan data quiz yang diretrieve dari firestore
+- Update konfigurasi firestore pada halaman list kuis
+- Update tampilan data kuis yang diretrieve dari firestore
 Masalah yang dihadapi:
 - Kurangnya pemahaman mengenai firestore pada web
 
@@ -234,14 +240,13 @@ Masalah yang dihadapi:
 
 Steven:
 Yang dikerjakan hari ini:
-- Update konfigurasi firestore pada halaman list quiz
-- Update tampilan data quiz yang diretrieve dari firestore
+- Update konfigurasi firestore pada halaman list kuis
+- Update tampilan data kuis yang diretrieve dari firestore
 Yang akan dikerjakan besok:
-- Membuat hapus quiz / pertanyaan
+- Membuat hapus kuis / pertanyaan
 Masalah yang dihadapi:
 - -
 
-Sprint Review
 Sprint Review
 Iterasi ke-2:
 1. Membuat pertanyaan (return to backlog)
@@ -250,3 +255,55 @@ Definition of done:
 - Pertanyaan yang dibuat telah disimpan dengan benar (not yet)
 - Terdapat halaman untuk memulai membuat pertanyaan (done)
 - Terdapat halaman untuk menambah pertanyaan beserta jawabannya (done)
+
+
+Sprint
+Iterasi ke-3:
+1. Membuat kuis
+Sebagai seorang pembuat kuis, saya dapat membuat kuis baru sehingga saya dapat menambah kuis beserta pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Kuis dan pertanyaan yang dibuat telah disimpan dengan benar
+- Terdapat halaman untuk memulai membuat kuis dan pertanyaan
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya
+Member: Richard
+
+2. Mengedit kuis
+Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan yang di-edit telah disimpan dengan benar
+Estimasi waktu: 4 jam
+
+3. Menghapus kuis
+Sebagai seorang pembuat kuis, saya dapat menghapus kuis yang sudah ada sehingga tampilan tidak dipenuhi kuis yang tidak diperlukan.
+Definition of done:
+- Terdapat halaman kuis telah dikonfigurasi sebelumnya
+- Kuis beserta pertanyaan telah dihapus dengan benar
+Member: Steven
+
+4. Logout
+Sebagai seorang pembuat kuis, saya dapat melakukan logout sehingga saya identitas saya tidak tercatat lagi pada perangkat dan dapat menggunakan identitas lain.
+Definition of done:
+- Terdapat tombol aksi untuk melakukan logout
+- Redirect kembali ke halaman login
+Member: Steven
+
+Hari ke-1 (23 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Memodifikasi styling input untuk mengisi pertanyaan dan pilihan
+Yang akan dikerjakan besok:
+- Penyempurnaan styling input
+- Konfigurasi collection quiz dan question pada database
+Masalah yang dihadapi:
+- Tampilan radio button tidak dapat dikonfigurasi, diperlukan bacaan lebih lanjut
+
+Steven:
+Yang dikerjakan hari ini:
+- Konfigurasi perubahan struktur dokumen quiz pada firestore
+- Update konfigurasi firestore pada halaman list kuis
+Yang akan dikerjakan besok:
+- Membuat hapus kuis
+- Membuat logout
+Masalah yang dihadapi:
+- -
