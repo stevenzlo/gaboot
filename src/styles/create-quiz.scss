@@ -1,3 +1,5 @@
+@use "@material/textfield";
+
 $quiz-preview-border-color: rgb(229, 229, 229);
 $quiz-preview-unselected-text-color: #777;
 $quiz-preview-background-unselected: #f2f2f2;
@@ -5,8 +7,19 @@ $quiz-preview-background-selected: #fff;
 $quiz-preview-background-border-hovered: #ddd;
 $quiz-list-item-background-selected: #eaf4fc;
 $delete-question-hover-color: #eee;
-
 $add-quiz-button-size: $button-height;
+
+$question-input-height: 50px;
+$input-background: #f7f7f7;
+
+@mixin input-style($background: #fff, $box-shadow-color: #CDCDCD) {
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px $box-shadow-color;
+  padding: 8px;
+  border: none;
+  background: $background;
+  height: $question-input-height;
+}
 
 #create-quiz {
   display: flex;
@@ -14,6 +27,87 @@ $add-quiz-button-size: $button-height;
   main {
     width: 100%;
     flex-basis: 80%;
+    background: $input-background;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    #create-quiz__input--question {
+      width: 90%;
+      text-align: center;
+      font-size: 1.75em;
+      margin-bottom: 16px;
+      @include input-style;
+    }
+    .create-quiz__input--timer {
+      display: flex;
+      flex-direction: column;
+      justify-content: cneter;
+      align-items: center;
+      input {
+        @include input-style;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        -moz-appearance: textfield;
+        box-shadow: 0px 1px 0px 0px #CDCDCD;
+        font-weight: 700;
+        font-size: 1.5em;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+    }
+    .create-quiz__input--options {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      > div {
+        position: relative;
+        margin-bottom: 8px;
+        margin-right: 8px;
+        flex-basis: calc(50% - 4px);
+        &:nth-child(1) input {
+          @include input-style(#e21b3c, #c01733);
+        }
+        &:nth-child(2) input {
+          @include input-style(#1368ce, #1059af);
+        }
+        &:nth-child(3) input {
+          @include input-style(#d89e00, #b88700);
+        }
+        &:nth-child(4) input {
+          @include input-style(#26890c, #20750a);
+        }
+        input {
+          padding: 8px;
+          @include input-style;
+          &[type="text"] {
+            width: 100%;
+            color: #fff;
+          }
+          &[type="radio"] {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateX(-8px) translateY(-50%);
+            z-index: 1;
+            cursor: pointer;
+            box-shadow: 0px 1px 0px 0px #CDCDCD;
+          }
+        }
+      }
+      > div:nth-child(2n) {
+        margin-right: 0px;
+      }
+    }
   }
   aside {
     width: 100%;

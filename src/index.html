@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <article class="deck">
@@ -73,16 +73,28 @@
 
       <section id="create-quiz" class="rainbow-bg">
         <main>
-          <input class="create-quiz__input--title" type="text" maxlength="50" placeholder="Type your question" />
+          <input type="text" id="create-quiz__input--question" class="create-quiz__input--question" maxlength="50" placeholder="Type your question" />
           <div class="create-quiz__input--timer">
-            <img src="./images/hourglass.svg" alt="Timer" />
+            <p>Time Limit in Seconds</p>
             <input type="number" max="120" value="20" />
           </div>
           <div class="create-quiz__input--options">
-            <input type="text" maxlength="20" placeholder="Add answer 1">
-            <input type="text" maxlength="20" placeholder="Add answer 2">
-            <input type="text" maxlength="20" placeholder="Add answer 3">
-            <input type="text" maxlength="20" placeholder="Add answer 4">
+            <div class="create-quiz__input--options--one">
+              <input id="create-quiz__input--option--one__label" type="text" maxlength="20" placeholder="Add answer 1">
+              <input id="create-quiz__input--option--one__radio" type="radio" name="correct" value="1">
+            </div>
+            <div class="create-quiz__input--options--two">
+              <input id="create-quiz__input--option--two__label" type="text" maxlength="20" placeholder="Add answer 2">
+              <input id="create-quiz__input--option--two__radio" type="radio" name="correct" value="2">
+            </div>
+            <div class="create-quiz__input--options--three">
+              <input id="create-quiz__input--option--three__label" type="text" maxlength="20" placeholder="Add answer 3">
+              <input id="create-quiz__input--option--three__radio" type="radio" name="correct" value="3">
+            </div>
+            <div class="create-quiz__input--options--four">
+              <input id="create-quiz__input--option--four__label" type="text" maxlength="20" placeholder="Add answer 4">
+              <input id="create-quiz__input--option--four__radio" type="radio" name="correct" value="4">
+            </div>
           </div>
         </main>
         <aside>
@@ -96,14 +108,6 @@
             </button>
           </div>
         </aside>
-      </section>
-
-      <!-- <section id="create-quiz" class="rainbow-bg">
-        <button id="create__list-button" class="mdc-button">
-          <div class="mdc-button__ripple"></div>
-          <span class="mdc-button__label">Quiz List</span>
-        </button>
-      </section> -->
 
       <section id="quiz-list" class="rainbow-bg mdc-typography">
         <div class="nav-button">
