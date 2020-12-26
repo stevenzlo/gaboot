@@ -12,7 +12,7 @@ Sebagai seorang pembuat pertanyaan, saya dapat melakukan login sehingga saya dap
 Definition of done:
 - Terdapat halaman login
 - Dapat terautentikasi dengan benar
-Estimasi waktu: 3 hari
+Estimasi waktu: 12 jam
 
 2. Membuat pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
@@ -20,21 +20,21 @@ Definition of done:
 - Pertanyaan yang dibuat telah disimpan dengan benar
 - Terdapat halaman untuk memulai membuat pertanyaan
 - Terdapat halaman untuk menambah pertanyaan beserta jawabannya
-Estimasi waktu: 6 hari
+Estimasi waktu: 24 jam
 
 3. Mengedit pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat mengedit pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
 Definition of done:
 - Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan yang di-edit telah disimpan dengan benar
-Estimasi waktu: 1 hari
+Estimasi waktu: 4 jam
 
 4. Menghapus pertanyaan
 Sebagai seorang pembuat pertanyaan, saya dapat menghapus pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
 Definition of done:
 - Terdapat halaman pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan telah dihapus dengan benar
-Estimasi waktu: 1 hari
+Estimasi waktu: 4 jam
 
 5. Mengikuti quiz
 Sebagai seorang pengambil quiz, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti quiz dengan baik
@@ -45,7 +45,7 @@ Definition of done:
 - Jawaban dapat dipilih
 - Jawaban direkam dengan benar
 - Jawaban benar ditampilkan
-Estimasi waktu: 6 hari
+Estimasi waktu: 24 jam
 
 Sprint
 Iterasi ke-1:
@@ -240,3 +240,13 @@ Yang akan dikerjakan besok:
 - Membuat hapus quiz / pertanyaan
 Masalah yang dihadapi:
 - -
+
+Sprint Review
+Sprint Review
+Iterasi ke-2:
+1. Membuat pertanyaan (return to backlog)
+Sebagai seorang pembuat pertanyaan, saya dapat membuat pertanyaan baru sehingga saya dapat menambah pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Pertanyaan yang dibuat telah disimpan dengan benar (not yet)
+- Terdapat halaman untuk memulai membuat pertanyaan (done)
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya (done)
