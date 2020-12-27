@@ -21,6 +21,16 @@ $input-background: #f7f7f7;
   height: $question-input-height;
 }
 
+@mixin radio-input-style($color) {
+  width: 12px;
+  height: 12px;
+  border: 2px solid $color;
+  transition: 0.2 all linear;
+  &:checked {
+    border: 8px solid $color;
+  }
+}
+
 #create-quiz {
   display: flex;
   justify-content: column;
@@ -94,13 +104,35 @@ $input-background: #f7f7f7;
             color: #fff;
           }
           &[type="radio"] {
+            padding: 0;
             position: absolute;
             top: 50%;
             right: 0;
             transform: translateX(-8px) translateY(-50%);
             z-index: 1;
             cursor: pointer;
-            box-shadow: 0px 1px 0px 0px #CDCDCD;
+            box-shadow: 0px 2px 0px 0px #33333355;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #fff;
+            transition: 0.2s all linear;
+            &:checked::before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 8.5px;
+              height: 8.5px;
+              background: #66bf39;
+              border-radius: 50%;
+              transition: 0.2s all linear;
+              z-index: 2;
+            }
           }
         }
       }
