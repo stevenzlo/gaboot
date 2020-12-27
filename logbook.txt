@@ -265,7 +265,7 @@ Definition of done:
 - Kuis dan pertanyaan yang dibuat telah disimpan dengan benar
 - Terdapat halaman untuk memulai membuat kuis dan pertanyaan
 - Terdapat halaman untuk menambah pertanyaan beserta jawabannya
-Member: Richard
+Member: Richard, Steven
 
 2. Mengedit kuis
 Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
@@ -286,9 +286,9 @@ Sebagai seorang pembuat kuis, saya dapat melakukan logout sehingga saya identita
 Definition of done:
 - Terdapat tombol aksi untuk melakukan logout
 - Redirect kembali ke halaman login
-Member: Steven
+Member: Richard, Steven
 
-Hari ke-1 (23 Desember 2020):
+Hari ke-1 (26 Desember 2020):
 Richard:
 Yang dikerjakan hari ini:
 - Memodifikasi styling input untuk mengisi pertanyaan dan pilihan
@@ -305,5 +305,25 @@ Yang dikerjakan hari ini:
 Yang akan dikerjakan besok:
 - Membuat hapus kuis
 - Membuat logout
+Masalah yang dihadapi:
+- -
+
+Hari ke-1 (27 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Penyempurnaan styling input
+- Penambahan questions lokal yang siap diinsert ke database
+- Konfigurasi collection quiz dan questions di database
+Yang akan dikerjakan besok:
+- Kode untuk menginsert questions lokal ke database
+Masalah yang dihadapi:
+- Penekanan spasi pada element Input menyebabkan Bespoke untuk mengarah ke slide selanjutnya
+
+Steven:
+Yang dikerjakan hari ini:
+- Membuat logout pada halaman list kuis
+- Membuat hapus kuis
+Yang akan dikerjakan besok:
+- Update konfirmasi serta message untuk penghapusan kuis
 Masalah yang dihadapi:
 - -
