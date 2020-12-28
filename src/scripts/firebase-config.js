@@ -10,6 +10,7 @@ function run() {
 	};
 
 	firebase.initializeApp(firebaseConfig);
+	return firebase;
 }
 
 module.exports = {

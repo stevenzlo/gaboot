@@ -17,8 +17,8 @@ var quizList = require('./quiz-list');
 var firebaseAuth = require('./firebase-auth');
 
 const main = () => {
-  firebaseConfig.run();
-  firebaseUi.run();
+  const firebase = firebaseConfig.run();
+  firebaseUi.run(firebase);
 
   // Bespoke.js
   var deck = bespoke.from({ parent: 'article.deck', slides: 'section' }, [
@@ -34,7 +34,7 @@ const main = () => {
   join.run(deck);
   login.run(deck);
   dashboard.run(deck);
-  createQuiz.run(deck);
+  createQuiz.run(deck, firebase);
   quizList.run(deck, firebaseAuth.signOut);
 }
 

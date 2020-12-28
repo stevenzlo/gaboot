@@ -13,12 +13,20 @@ const optionOneCheck = document.querySelector('#create-quiz__input--option--one_
 const optionTwoCheck = document.querySelector('#create-quiz__input--option--two__radio');
 const optionThreeCheck = document.querySelector('#create-quiz__input--option--three__radio');
 const optionFourCheck = document.querySelector('#create-quiz__input--option--four__radio');
+const addQuestionButton = document.querySelector('#create-quiz__add-question-button');
+const buttonRipple = new MDCRipple(addQuestionButton);
+const seeQuizButton = document.querySelector('#create-quiz__top-bar--see-quiz-button');
+const submitQuizButton = document.querySelector('#create-quiz__top-bar--submit-quiz-button');
 
-function run(deck) {
-    const addQuestionButton = document.querySelector('#create-quiz__add-question-button');
-    const buttonRipple = new MDCRipple(addQuestionButton);
+function run(deck, firebase) {
     initializeQuestionList();
     initializeQuestionInput();
+    seeQuizButton.addEventListener('click', e => {
+        deck.slide(4);
+    })
+    submitQuizButton.addEventListener('click', e => {
+        submitQuiz(firebase);
+    })
     addQuestionButton.addEventListener('click', e => {
         addQuestion();
     });
@@ -35,23 +43,41 @@ function createNewEmptyQuestion() {
 }
 
 function initializeQuestionInput() {
+    question.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     question.addEventListener('keyup', e => {
         questions[currentQuestionIndex].question = question.value;
         updateListPreview(currentQuestionIndex);
-    })
+    });
+    timer.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     timer.addEventListener('keyup', e => {
         questions[currentQuestionIndex].timer = timer.value;
         updateListPreview(currentQuestionIndex);
-    })
+    });
+    optionOne.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     optionOne.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[0] = optionOne.value;
     })
+    optionTwo.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     optionTwo.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[1] = optionTwo.value;
     })
+    optionThree.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     optionThree.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[2] = optionThree.value;
     })
+    optionFour.addEventListener('keydown', e => {
+        e.stopPropagation();
+    });
     optionFour.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[3] = optionFour.value;
     })
@@ -79,13 +105,13 @@ function initializeQuestionList() {
 
 function addQuestion() {
     const newQuestion = createNewEmptyQuestion();
-    const newLi = createQuestionPreviewLi(newQuestion);
+    const newLi = createListPreviewQuestion(newQuestion);
     ol.append(newLi);
     questions.push(newQuestion);
     addListPreviewListener(newLi);
 }
 
-function createQuestionPreviewLi(newQuestion) {
+function createListPreviewQuestion(newQuestion) {
     const li = document.createElement('li');
     li.classList.add('create-quiz__list__item');
     li.innerHTML = `
@@ -129,8 +155,8 @@ function updateListPreview(index) {
     const listPreviewToUpdate = ol.children[index];
     const listPreviewQuestion = listPreviewToUpdate.querySelector('.create-quiz__list__item--right__question');
     const listPreviewTimer = listPreviewToUpdate.querySelector('.create-quiz__list__item--right__timer');
-    listPreviewQuestion.innerText = questions[index].question;
-    listPreviewTimer.innerText = questions[index].timer;
+    listPreviewQuestion.innerText = questions[index].question ? questions[index].question : "Type your question";
+    listPreviewTimer.innerText = questions[index].timer ? questions[index].timer : 0;
 }
 
 function changeCurrentQuestionTo(index) {
@@ -162,6 +188,30 @@ function changeCurrentQuestionTo(index) {
 function removeCurrentActiveListPreview() {
     const activeLi = document.querySelector('.create-quiz__list__item--active');
     if (activeLi) activeLi.classList.remove('create-quiz__list__item--active');
+}
+
+function submitQuiz(firestore) {
+    const db = firebase.firestore();
+    const uid = firebase.auth().currentUser.uid;
+    const questionsToInsert = questions.map(question => {
+        return {
+            number: question.number,
+            question: question.question,
+            correctAnswer: question.correct,
+            timer: question.timer,
+            options: question.options.map(option => option)
+        };
+    })
+    db
+        .collection('users')
+        .doc(uid)
+        .collection('quiz')
+        .doc()
+        .set({
+            questionsToInsert
+        })
+        .then(() => console.log('Quiz made!'))
+        .catch(error => console.error(error));
 }
 
 module.exports = {
