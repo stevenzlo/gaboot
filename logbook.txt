@@ -330,6 +330,14 @@ Masalah yang dihadapi:
 
 Hari ke-3 (28 Desember 2020):
 Richard:
+Yang dikerjakan hari ini:
+- Kode untuk menginsert questions lokal ke database
+- Konfigurasi event handler keydown Bespoke
+Yang akan dikerjakan besok:
+- Halaman lobby untuk join quiz
+- Konfigurasi collection lobby join quiz
+Masalah yang dihadapi:
+- -
 
 Steven:
 Yang dikerjakan hari ini:
