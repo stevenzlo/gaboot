@@ -32,6 +32,9 @@
       text-align: center;
       height: auto;
       padding: 8px;
+      &.action-cell {
+        width: 20%;
+      }
     }
   }
   h1 {

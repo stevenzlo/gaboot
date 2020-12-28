@@ -1,8 +1,13 @@
 const quiz = require('./quiz');
+const MDCDialog = require('@material/dialog').MDCDialog;
+const MDCSnackbar = require('@material/snackbar').MDCSnackbar;
+let quizDeleteDialog, snackbar;
 
 function run(deck, signOutCallback) {
   const createButton = document.querySelector('#list__create-button');
   const logoutButton = document.querySelector('#list__logout-button');
+  quizDeleteDialog = new MDCDialog(document.querySelector('#quiz__delete-dialog'));
+  snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
   createButton.addEventListener('click', () => {
     deck.slide(3);
   });
@@ -10,6 +15,7 @@ function run(deck, signOutCallback) {
     signOutCallback(deck);
   });
   initQuizList(deck);
+  // snackbar.open();
 }
 
 function refreshQuizList(querySnapshot) {
@@ -35,7 +41,7 @@ function refreshQuizList(querySnapshot) {
             <button class="mdc-button mdc-button--raised" data-id="${doc.id}">
               <i class="material-icons mdc-button__icon" aria-hidden="true">edit</i>
             </button>
-            <button class="list__delete-button mdc-button mdc-button--raised" data-id="${doc.id}">
+            <button class="list__delete-button mdc-button mdc-button--raised" data-id="${doc.id}" data-title="${data['title']}">
               <i class="material-icons mdc-button__icon" aria-hidden="true">delete</i>
             </button>
           </td>
@@ -46,15 +52,21 @@ function refreshQuizList(querySnapshot) {
     const allDeleteButton = document.querySelectorAll('.list__delete-button');
     allDeleteButton.forEach((element) => {
       element.addEventListener('click', () => {
-        if (firebase.auth().currentUser) {
-          quiz.deleteQuiz(firebase.auth().currentUser.uid, element.dataset.id)
-            .then(() => {
-              console.log('Success');
-            })
-            .catch((error) => {
-              console.log(error);
-            });
-        }
+        const quizDeleteTitle = document.querySelector('#quiz__delete-title');
+        quizDeleteTitle.innerHTML = element.dataset.title;
+        quizDeleteDialog.listen('MDCDialog:closing', function() {
+          if (firebase.auth().currentUser) {
+            quiz.deleteQuiz(firebase.auth().currentUser.uid, element.dataset.id)
+              .then(() => {
+              })
+              .catch((error) => {
+                console.log(error);
+              });
+          }
+        });
+        quizDeleteDialog.open();
+        
+        
       });
     });
   } else {
