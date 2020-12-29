@@ -209,19 +209,61 @@
           <div class="join-dashboard__lobby--member">Steven</div>
         </main>
       </section>
-      <!-- <div class="mdc-snackbar">
-        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
-          <div class="mdc-snackbar__label" aria-atomic="false">
-            Can't send photo. Retry in 5 seconds.
+
+      <section id="edit-quiz" class="rainbow-bg">
+        <div class="edit-quiz__top-bar">
+          <button id="edit-quiz__top-bar--cancel-quiz-button" class="mdc-button">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Cancel</span>
+          </button>
+          <button id="edit-quiz__top-bar--submit-quiz-button" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label">Save</span>
+          </button>
+        </div>
+        <main>
+          <input type="text" id="edit-quiz__input--question" class="edit-quiz__input--question" maxlength="50" placeholder="Type your question" />
+          <div class="edit-quiz__input--timer">
+            <p>Time Limit in Seconds</p>
+            <input id="edit-quiz__input--timer" type="number" placeholder="20" max="120" pattern="^[0-9]*$" />
           </div>
-          <div class="mdc-snackbar__actions" aria-atomic="true">
-            <button type="button" class="mdc-button mdc-snackbar__action">
+          <div class="edit-quiz__input--options">
+            <div class="edit-quiz__input--options--one">
+              <input id="edit-quiz__input--option--one__label" type="text" maxlength="20" placeholder="Add answer 1">
+              <input id="edit-quiz__input--option--one__radio" type="radio" name="correct" value="1">
+            </div>
+            <div class="edit-quiz__input--options--two">
+              <input id="edit-quiz__input--option--two__label" type="text" maxlength="20" placeholder="Add answer 2">
+              <input id="edit-quiz__input--option--two__radio" type="radio" name="correct" value="2">
+            </div>
+            <div class="edit-quiz__input--options--three">
+              <input id="edit-quiz__input--option--three__label" type="text" maxlength="20" placeholder="Add answer 3">
+              <input id="edit-quiz__input--option--three__radio" type="radio" name="correct" value="3">
+            </div>
+            <div class="edit-quiz__input--options--four">
+              <input id="edit-quiz__input--option--four__label" type="text" maxlength="20" placeholder="Add answer 4">
+              <input id="edit-quiz__input--option--four__radio" type="radio" name="correct" value="4">
+            </div>
+          </div>
+        </main>
+        <aside>
+          <div> 
+            <ol class="edit-quiz__list"></ol>            
+          </div>
+          <div>
+            <button id="edit-quiz__add-question-button" class="mdc-button mdc-button--raised">
               <div class="mdc-button__ripple"></div>
-              <span class="mdc-button__label">Retry</span>
+              <span class="mdc-button__label">+</span>
             </button>
           </div>
+        </aside>
+      </section>
+      <div class="mdc-snackbar mdc-snackbar--leading">
+        <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+          <div class="mdc-snackbar__label" aria-atomic="false">
+            -
+          </div>
         </div>
-      </div> -->
+      </div>
     </article>
 
     <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>

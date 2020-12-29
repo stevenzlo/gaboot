@@ -1,13 +1,14 @@
 const quiz = require('./quiz');
 const MDCDialog = require('@material/dialog').MDCDialog;
 const MDCSnackbar = require('@material/snackbar').MDCSnackbar;
-let quizDeleteDialog, snackbar;
+let quizDeleteDialog, snackbar, snackbarRoot;
 
 function run(deck, signOutCallback) {
   const createButton = document.querySelector('#list__create-button');
   const logoutButton = document.querySelector('#list__logout-button');
   quizDeleteDialog = new MDCDialog(document.querySelector('#quiz__delete-dialog'));
-  snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+  snackbarRoot = document.querySelector('.mdc-snackbar');
+  snackbar = new MDCSnackbar(snackbarRoot);
   createButton.addEventListener('click', () => {
     deck.slide(3);
   });
@@ -15,7 +16,19 @@ function run(deck, signOutCallback) {
     signOutCallback(deck);
   });
   initQuizList(deck);
-  // snackbar.open();
+  snackbar.listen('MDCSnackbar:closed', () => {
+    const snackbarText = document.querySelector('.mdc-snackbar .mdc-snackbar__label');
+    snackbarText.innerText = '-';
+    snackbarRoot.classList.remove('snackbar-success');
+    snackbarRoot.classList.remove('snackbar-danger');
+  });
+}
+
+function openSnackbarMessage(message, status) {
+  const snackbarText = document.querySelector('.mdc-snackbar .mdc-snackbar__label');
+  snackbarText.innerText = message;
+  snackbarRoot.classList.add(`snackbar-${status}`);
+  snackbar.open();
 }
 
 function refreshQuizList(querySnapshot) {
@@ -58,9 +71,11 @@ function refreshQuizList(querySnapshot) {
           if (firebase.auth().currentUser) {
             quiz.deleteQuiz(firebase.auth().currentUser.uid, element.dataset.id)
               .then(() => {
+                openSnackbarMessage('Quiz deleted successfully.', 'success');
               })
               .catch((error) => {
                 console.log(error);
+                openSnackbarMessage('Quiz failed to be deleted.', 'danger');
               });
           }
         });
