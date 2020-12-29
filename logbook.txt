@@ -53,6 +53,35 @@ Definition of done:
 - Terdapat tombol aksi untuk melakukan logout
 - Redirect kembali ke halaman login
 
+7. Mengakses quiz yang telah dibuat
+Sebagai seorang pembuat kuis, saya dapat mengakses kuis-kuis yang telah saya buat sehingga saya dapat memilih kuis yang akan diadakan
+Definition of done:
+- Terdapat halaman yang menampilkan daftar kuis yang telah dibuat
+- Halaman menampilkan daftar kuis yang telah dibuat dengan benar
+- Terdapat daftar kuis yang telah dibuat yang tersimpan di database
+
+8. Mengadakan kuis
+Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
+Definition of done:
+- Terdapat halaman untuk mengadakan kuis
+- Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis
+- Kuis ditandai sebagai sedang diadakan di database
+
+9. Memulai kuis
+Sebagai seorang pembuat kuis, saya dapat memulai kuis yang telah diadakan sehingga saya dapat merekam jawaban yang diberikan oleh pengambil kuis terhadap pertanyaan-pertanyaan yang ada
+Definition of done:
+- Terdapat halaman untuk memulai kuis
+- Terdapat halaman untuk menampilkan pertanyaan, pilihan, dan timer saat kuis berlangsung
+- Terdapat halaman untuk memilih jawaban saat kuis berlangsung
+- Kuis menampilkan jawaban yang benar ketika waktu memilih jawaban telah habis
+- Kuis ditandai sebagai telah dimulai di database
+
+10. Melihat peringkat
+Sebagai seorang pembuat kuis, saya dapat menampilkan peringkat pengambil kuis sehingga suasana kompetitif saat kuis diambil tercipta
+Definition of done:
+- Terdapat halaman untuk menunjukkan peringkat saat kuis berlangsung dan berakhir
+- Sistem merekam jawaban dan poin-poin pengambil kuis di database
+
 Sprint
 Iterasi ke-1:
 1. Login
