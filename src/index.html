@@ -14,6 +14,23 @@
   <body>
     <article class="deck">
       <section id="join" class="rainbow-bg">
+        <div id="join__invalid-game-pin-banner" class="mdc-banner" role="banner">
+          <div class="mdc-banner__content"
+               role="status"
+               aria-live="assertive">
+            <div class="mdc-banner__graphic-text-wrapper">
+              <div class="mdc-banner__text">
+                The game PIN you input did not exist
+              </div>
+            </div>
+            <div class="mdc-banner__actions">
+              <button type="button" class="mdc-button mdc-banner__primary-action">
+                <div class="mdc-button__ripple"></div>
+                <div class="mdc-button__label">Okay</div>
+              </button>
+            </div>
+          </div>
+        </div>
         <h1 class="join__title">Gaboot!</h1>
         <button id="join__login-button" class="mdc-button">
           <div class="mdc-button__ripple"></div>
@@ -22,11 +39,17 @@
         <main>
           <label class="mdc-text-field mdc-text-field--filled">
             <span class="mdc-text-field__ripple"></span>
-            <span class="mdc-floating-label">Game PIN</span>
-            <input class="mdc-text-field__input" type="text" maxlength="6" minlength="6">
+            <span class="mdc-floating-label">Name</span>
+            <input id="join__name--input" class="mdc-text-field__input" type="text" maxlength="15" minlength="1">
             <span class="mdc-line-ripple"></span>
           </label>
-          <button class="mdc-button mdc-button--raised">
+          <label class="mdc-text-field mdc-text-field--filled">
+            <span class="mdc-text-field__ripple"></span>
+            <span class="mdc-floating-label">Game PIN</span>
+            <input id="join__pin--input" class="mdc-text-field__input" type="text" maxlength="6" minlength="6">
+            <span class="mdc-line-ripple"></span>
+          </label>
+          <button id="join__play-button" class="mdc-button mdc-button--raised">
             <span class="mdc-button__label">Play now!</span>
           </button>
         </main>

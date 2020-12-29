@@ -43,41 +43,23 @@ function createNewEmptyQuestion() {
 }
 
 function initializeQuestionInput() {
-    question.addEventListener('keydown', e => {
-        e.stopPropagation();
-    });
     question.addEventListener('keyup', e => {
         questions[currentQuestionIndex].question = question.value;
         updateListPreview(currentQuestionIndex);
-    });
-    timer.addEventListener('keydown', e => {
-        e.stopPropagation();
     });
     timer.addEventListener('keyup', e => {
         questions[currentQuestionIndex].timer = timer.value;
         updateListPreview(currentQuestionIndex);
     });
-    optionOne.addEventListener('keydown', e => {
-        e.stopPropagation();
-    });
     optionOne.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[0] = optionOne.value;
     })
-    optionTwo.addEventListener('keydown', e => {
-        e.stopPropagation();
-    });
     optionTwo.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[1] = optionTwo.value;
     })
-    optionThree.addEventListener('keydown', e => {
-        e.stopPropagation();
-    });
     optionThree.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[2] = optionThree.value;
     })
-    optionFour.addEventListener('keydown', e => {
-        e.stopPropagation();
-    });
     optionFour.addEventListener('keyup', e => {
         questions[currentQuestionIndex].options[3] = optionFour.value;
     })

@@ -52,13 +52,15 @@ Sebagai seorang pembuat kuis, saya dapat melakukan logout sehingga saya identita
 Definition of done:
 - Terdapat tombol aksi untuk melakukan logout
 - Redirect kembali ke halaman login
+Estimasi waktu: 4 jam
 
-7. Mengakses quiz yang telah dibuat
+7. Mengakses kuis yang telah dibuat
 Sebagai seorang pembuat kuis, saya dapat mengakses kuis-kuis yang telah saya buat sehingga saya dapat memilih kuis yang akan diadakan
 Definition of done:
 - Terdapat halaman yang menampilkan daftar kuis yang telah dibuat
 - Halaman menampilkan daftar kuis yang telah dibuat dengan benar
 - Terdapat daftar kuis yang telah dibuat yang tersimpan di database
+Estimasi waktu: 8 jam
 
 8. Mengadakan kuis
 Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
@@ -66,6 +68,7 @@ Definition of done:
 - Terdapat halaman untuk mengadakan kuis
 - Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis
 - Kuis ditandai sebagai sedang diadakan di database
+Estimasi waktu: 8 jam
 
 9. Memulai kuis
 Sebagai seorang pembuat kuis, saya dapat memulai kuis yang telah diadakan sehingga saya dapat merekam jawaban yang diberikan oleh pengambil kuis terhadap pertanyaan-pertanyaan yang ada
@@ -75,12 +78,14 @@ Definition of done:
 - Terdapat halaman untuk memilih jawaban saat kuis berlangsung
 - Kuis menampilkan jawaban yang benar ketika waktu memilih jawaban telah habis
 - Kuis ditandai sebagai telah dimulai di database
+Estimasi waktu: 16 jam
 
 10. Melihat peringkat
 Sebagai seorang pembuat kuis, saya dapat menampilkan peringkat pengambil kuis sehingga suasana kompetitif saat kuis diambil tercipta
 Definition of done:
 - Terdapat halaman untuk menunjukkan peringkat saat kuis berlangsung dan berakhir
 - Sistem merekam jawaban dan poin-poin pengambil kuis di database
+Estimasi waktu: 16 jam
 
 Sprint
 Iterasi ke-1:
@@ -374,5 +379,59 @@ Yang dikerjakan hari ini:
 - Membuat kerangka awal message penghapusan kuis
 Yang akan dikerjakan besok:
 - Update message penghapusan kuis
+Masalah yang dihadapi:
+- -
+
+Sprint
+Iterasi ke-4:
+1. Mengakses kuis yang telah dibuat
+Sebagai seorang pembuat kuis, saya dapat mengakses kuis-kuis yang telah saya buat sehingga saya dapat memilih kuis yang akan diadakan
+Definition of done:
+- Terdapat halaman yang menampilkan daftar kuis yang telah dibuat
+- Halaman menampilkan daftar kuis yang telah dibuat dengan benar
+- Terdapat daftar kuis yang telah dibuat yang tersimpan di database
+Estimasi waktu: 8 jam
+
+2. Mengedit kuis
+Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
+- Pertanyaan yang di-edit telah disimpan dengan benar
+Estimasi waktu: 4 jam
+
+3. Mengikuti kuis
+Sebagai seorang pengambil kuis, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti kuis dengan baik
+Definition of done:
+- Terdapat halaman untuk memasukkan ID kuis untuk memasuki halaman tunggu
+- Terdapat halaman tunggu ketika kuis belum dimulai
+- Pertanyaan ditampilkan dengan benar ketika kuis dimulai
+- Jawaban dapat dipilih
+- Jawaban direkam dengan benar
+- Jawaban benar ditampilkan
+Estimasi waktu: 24 jam
+
+4. Mengadakan kuis
+Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
+Definition of done:
+- Terdapat halaman untuk mengadakan kuis
+- Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis
+- Kuis ditandai sebagai sedang diadakan di database
+Estimasi waktu: 8 jam
+
+Hari ke-1 (29 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+
+Yang akan dikerjakan besok:
+
+Masalah yang dihadapi:
+
+
+Steven:
+Yang dikerjakan hari ini:
+- Update message penghapusan kuis
+- Membuat kerangka awal tampilan dan fungsionalitas edit kuis berdasarkan halaman pembuatan kuis
+Yang akan dikerjakan besok:
+- Update fungsionalitas edit kuis
 Masalah yang dihadapi:
 - -

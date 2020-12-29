@@ -19,6 +19,7 @@ $border-radius: 3px;
 @use "@material/typography/mdc-typography";
 @use "@material/dialog";
 @use "@material/snackbar/mdc-snackbar";
+@use "@material/banner/styles";
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;

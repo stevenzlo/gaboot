@@ -17,6 +17,11 @@ var quizList = require('./quiz-list');
 var firebaseAuth = require('./firebase-auth');
 
 const main = () => {
+  document.querySelectorAll('input').forEach(input => {
+    input.addEventListener('keydown', e => {
+      e.stopPropagation();
+    })
+  })
   const firebase = firebaseConfig.run();
   firebaseUi.run(firebase);
 
@@ -31,7 +36,7 @@ const main = () => {
     extern(bespoke)
   ]);
 
-  join.run(deck);
+  join.run(deck, firebase);
   login.run(deck);
   dashboard.run(deck);
   createQuiz.run(deck, firebase);
