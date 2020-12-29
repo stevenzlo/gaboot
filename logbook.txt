@@ -450,11 +450,13 @@ Estimasi waktu: 8 jam
 Hari ke-1 (29 Desember 2020):
 Richard:
 Yang dikerjakan hari ini:
-
+- Konfigurasi collection hosted quiz di database
+- Penambahan fungsionalitas untuk join hosted quiz
+- Halaman tunggu kuis
 Yang akan dikerjakan besok:
-
+- Pembuatan halaman untuk tampilan ketika kuis berlangsung untuk pengambil kuis
 Masalah yang dihadapi:
-
+- Styling Material Component Banner tidak cocok, perlu dipelajari lebih lanjut
 
 Steven:
 Yang dikerjakan hari ini:
