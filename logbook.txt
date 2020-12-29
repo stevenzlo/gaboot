@@ -272,7 +272,6 @@ Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang s
 Definition of done:
 - Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya
 - Pertanyaan yang di-edit telah disimpan dengan benar
-Estimasi waktu: 4 jam
 
 3. Menghapus kuis
 Sebagai seorang pembuat kuis, saya dapat menghapus kuis yang sudah ada sehingga tampilan tidak dipenuhi kuis yang tidak diperlukan.
@@ -347,3 +346,33 @@ Yang akan dikerjakan besok:
 - Update message penghapusan kuis
 Masalah yang dihadapi:
 - -
+
+Sprint Review
+Iterasi ke-3:
+1. Membuat kuis (done)
+Sebagai seorang pembuat kuis, saya dapat membuat kuis baru sehingga saya dapat menambah kuis beserta pertanyaan yang akan ditampilkan saat kuis berlangsung.
+Definition of done:
+- Kuis dan pertanyaan yang dibuat telah disimpan dengan benar (done)
+- Terdapat halaman untuk memulai membuat kuis dan pertanyaan (done)
+- Terdapat halaman untuk menambah pertanyaan beserta jawabannya (done)
+Member: Richard, Steven
+
+2. Mengedit kuis (return to backlog)
+Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya (not yet)
+- Pertanyaan yang di-edit telah disimpan dengan benar (not yet)
+
+3. Menghapus kuis (done)
+Sebagai seorang pembuat kuis, saya dapat menghapus kuis yang sudah ada sehingga tampilan tidak dipenuhi kuis yang tidak diperlukan.
+Definition of done:
+- Terdapat halaman kuis telah dikonfigurasi sebelumnya (done)
+- Kuis beserta pertanyaan telah dihapus dengan benar (done)
+Member: Steven
+
+4. Logout (done)
+Sebagai seorang pembuat kuis, saya dapat melakukan logout sehingga saya identitas saya tidak tercatat lagi pada perangkat dan dapat menggunakan identitas lain.
+Definition of done:
+- Terdapat tombol aksi untuk melakukan logout (done)
+- Redirect kembali ke halaman login (done)
+Member: Steven
