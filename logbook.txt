@@ -337,7 +337,7 @@ Yang akan dikerjakan besok:
 Masalah yang dihadapi:
 - -
 
-Hari ke-1 (27 Desember 2020):
+Hari ke-2 (27 Desember 2020):
 Richard:
 Yang dikerjakan hari ini:
 - Penyempurnaan styling input
@@ -354,5 +354,25 @@ Yang dikerjakan hari ini:
 - Membuat hapus kuis
 Yang akan dikerjakan besok:
 - Update konfirmasi serta message untuk penghapusan kuis
+Masalah yang dihadapi:
+- -
+
+Hari ke-3 (28 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Kode untuk menginsert questions lokal ke database
+- Konfigurasi event handler keydown Bespoke
+Yang akan dikerjakan besok:
+- Halaman lobby untuk join quiz
+- Konfigurasi collection lobby join quiz
+Masalah yang dihadapi:
+- -
+
+Steven:
+Yang dikerjakan hari ini:
+- Update konfirmasi penghapusan kuis
+- Membuat kerangka awal message penghapusan kuis
+Yang akan dikerjakan besok:
+- Update message penghapusan kuis
 Masalah yang dihadapi:
 - -
