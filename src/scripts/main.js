@@ -15,8 +15,11 @@ var dashboard = require('./dashboard');
 var createQuiz = require('./create-quiz');
 var quizList = require('./quiz-list');
 var firebaseAuth = require('./firebase-auth');
+var editQuiz = require('./edit-quiz');
+var snackbar = require('./snackbar');
 
 const main = () => {
+  snackbar.run();
   document.querySelectorAll('input').forEach(input => {
     input.addEventListener('keydown', e => {
       e.stopPropagation();
@@ -41,6 +44,7 @@ const main = () => {
   dashboard.run(deck);
   createQuiz.run(deck, firebase);
   quizList.run(deck, firebaseAuth.signOut);
+  editQuiz.run(deck);
 }
 
 export default main;

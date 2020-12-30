@@ -2,6 +2,8 @@ $primary: #333333;
 $on-primary: #fff;
 $button-height: 30px;
 $border-radius: 3px;
+$success-color: #2eb85c;
+$danger-color: #e55353;
 
 @use "@material/theme" with (
     $primary: $primary,
@@ -19,6 +21,7 @@ $border-radius: 3px;
 @use "@material/typography/mdc-typography";
 @use "@material/dialog";
 @use "@material/snackbar/mdc-snackbar";
+@use "@material/snackbar";
 @use "@material/banner/styles";
 @include button.core-styles;
 @include textfield.core-styles;
@@ -35,3 +38,15 @@ $border-radius: 3px;
 @import "./quiz-list";
 @import "./join-dashboard.scss";
 @import "./edit-quiz";
+
+.mdc-snackbar.snackbar-success {
+  @include snackbar.fill-color($success-color);
+}
+.mdc-snackbar.snackbar-danger {
+  @include snackbar.fill-color($danger-color);
+}
+@media (min-width: snackbar.$mobile-breakpoint) {
+  .mdc-snackbar {
+    @include snackbar.position-leading();
+  }
+}

@@ -1,6 +1,8 @@
-function getQuiz(userId, callback) {
+function getQuiz(userId, callback, deck) {
     const quizRef = firebase.firestore().collection('users').doc(userId).collection('quiz').where('deleted', '==', false);
-    quizRef.onSnapshot(callback);
+    quizRef.onSnapshot((querySnapshot) => {
+        callback(querySnapshot, deck);
+    });
 }
 
 function deleteQuiz(userId, quizId) {
@@ -10,7 +12,13 @@ function deleteQuiz(userId, quizId) {
     });
 }
 
+function getQuizByQuizId(userId, quizId) {
+    const quizRef = firebase.firestore().collection('users').doc(userId).collection('quiz').doc(quizId);
+    return quizRef.get();
+}
+
 module.exports = {
     getQuiz: getQuiz,
-    deleteQuiz: deleteQuiz
+    deleteQuiz: deleteQuiz,
+    getQuizByQuizId: getQuizByQuizId
 }
