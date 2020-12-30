@@ -1,14 +1,5 @@
-@use "@material/snackbar";
 @use "@material/button";
 $action-button-color: #f44336;
-$success-color: #2eb85c;
-$danger-color: #e55353;
-.mdc-snackbar.snackbar-success {
-  @include snackbar.fill-color($success-color);
-}
-.mdc-snackbar.snackbar-danger {
-  @include snackbar.fill-color($danger-color);
-}
 #quiz-list {
   align-items: initial;
   justify-content: initial;

@@ -1,14 +1,13 @@
 const quiz = require('./quiz');
 const MDCDialog = require('@material/dialog').MDCDialog;
-const MDCSnackbar = require('@material/snackbar').MDCSnackbar;
-let quizDeleteDialog, snackbar, snackbarRoot;
+const editQuiz = require('./edit-quiz');
+const snackbar = require('./snackbar');
+let quizDeleteDialog;
 
 function run(deck, signOutCallback) {
   const createButton = document.querySelector('#list__create-button');
   const logoutButton = document.querySelector('#list__logout-button');
   quizDeleteDialog = new MDCDialog(document.querySelector('#quiz__delete-dialog'));
-  snackbarRoot = document.querySelector('.mdc-snackbar');
-  snackbar = new MDCSnackbar(snackbarRoot);
   createButton.addEventListener('click', () => {
     deck.slide(3);
   });
@@ -16,22 +15,9 @@ function run(deck, signOutCallback) {
     signOutCallback(deck);
   });
   initQuizList(deck);
-  snackbar.listen('MDCSnackbar:closed', () => {
-    const snackbarText = document.querySelector('.mdc-snackbar .mdc-snackbar__label');
-    snackbarText.innerText = '-';
-    snackbarRoot.classList.remove('snackbar-success');
-    snackbarRoot.classList.remove('snackbar-danger');
-  });
 }
 
-function openSnackbarMessage(message, status) {
-  const snackbarText = document.querySelector('.mdc-snackbar .mdc-snackbar__label');
-  snackbarText.innerText = message;
-  snackbarRoot.classList.add(`snackbar-${status}`);
-  snackbar.open();
-}
-
-function refreshQuizList(querySnapshot) {
+function refreshQuizList(querySnapshot, deck) {
   const quizListBody = document.getElementById('quiz-list-body');
   quizListBody.innerHTML = "";
   if (querySnapshot.size) {
@@ -51,7 +37,7 @@ function refreshQuizList(querySnapshot) {
             </button>
           </td>
           <td class="mdc-data-table__cell text-center">
-            <button class="mdc-button mdc-button--raised" data-id="${doc.id}">
+            <button class="list__edit-button mdc-button mdc-button--raised" data-id="${doc.id}">
               <i class="material-icons mdc-button__icon" aria-hidden="true">edit</i>
             </button>
             <button class="list__delete-button mdc-button mdc-button--raised" data-id="${doc.id}" data-title="${data['title']}">
@@ -63,6 +49,7 @@ function refreshQuizList(querySnapshot) {
       i++;
     })
     const allDeleteButton = document.querySelectorAll('.list__delete-button');
+    const allEditButton = document.querySelectorAll('.list__edit-button');
     allDeleteButton.forEach((element) => {
       element.addEventListener('click', () => {
         const quizDeleteTitle = document.querySelector('#quiz__delete-title');
@@ -71,18 +58,22 @@ function refreshQuizList(querySnapshot) {
           if (firebase.auth().currentUser) {
             quiz.deleteQuiz(firebase.auth().currentUser.uid, element.dataset.id)
               .then(() => {
-                openSnackbarMessage('Quiz deleted successfully.', 'success');
+                snackbar.openSnackbarMessage('Quiz deleted successfully.', 'success');
               })
               .catch((error) => {
                 console.log(error);
-                openSnackbarMessage('Quiz failed to be deleted.', 'danger');
+                snackbar.openSnackbarMessage('Quiz failed to be deleted.', 'danger');
               });
           }
         });
         quizDeleteDialog.open();
-        
-        
       });
+      allEditButton.forEach((element) => {
+        element.addEventListener('click', () => {
+          editQuiz.refreshQuestionList(element.dataset.id, deck);
+          deck.slide(6);
+        });
+      })
     });
   } else {
     quizListBody.innerHTML = `
@@ -95,7 +86,7 @@ function refreshQuizList(querySnapshot) {
 function initQuizList(deck) {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      quiz.getQuiz(user.uid, refreshQuizList);
+      quiz.getQuiz(user.uid, refreshQuizList, deck);
     } else {
       deck.slide(0);
     }
