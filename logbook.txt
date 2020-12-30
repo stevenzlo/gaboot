@@ -466,3 +466,23 @@ Yang akan dikerjakan besok:
 - Update fungsionalitas edit kuis
 Masalah yang dihadapi:
 - -
+
+Hari ke-2 (30 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Pembuatan halaman untuk tampilan ketika kuis berlangsung untuk pengambil kuis
+Yang akan dikerjakan besok:
+- Sinkronisasi data di database dengan tampilan di lobby quiz
+- Penambahan pemilihan jawaban pada halaman tampilan ketika kuis berlangsung
+Masalah yang dihadapi:
+- Styling Material Component Banner tidak cocok, perlu dipelajari lebih lanjut
+
+Steven:
+Yang dikerjakan hari ini:
+- Tambah navigasi dari dashboard ke my quiz
+- Refactoring snackbar
+- Update fungsionalitas edit kuis
+Yang akan dikerjakan besok:
+- Membut halaman host kuis
+Masalah yang dihadapi:
+- -
