@@ -1,0 +1,72 @@
+$option-height: 50px;
+
+@mixin option-style($background: #fff, $box-shadow-color: #CDCDCD) {
+    border-radius: $border-radius;
+    box-shadow: 0px 4px 0px 0px $box-shadow-color;
+    padding: 8px;
+    background: $background;
+    height: $option-height;
+}
+  
+
+#answer-quiz {
+    .answer-quiz {
+        &__question {
+            font-size: 2em;
+            color: #fff;
+        }
+        &__options {
+            width: 90%;
+            padding: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            &--choosable {
+                position: relative;
+                display: flex;
+                align-items: center;
+                margin-right: 16px;
+                margin-bottom: 20px;
+                flex-basis: calc(50% - 8px);
+                padding: 16px;
+                border-radius: $border-radius;
+                color: #fff;
+                cursor: pointer;
+                transform-origin: 123.5px 32.5px;
+                &:nth-child(1) {
+                    @include option-style(#e21b3c, #c01733);
+                }
+                &:nth-child(2) {
+                    @include option-style(#1368ce, #1059af);
+                }
+                &:nth-child(3) {
+                    @include option-style(#d89e00, #b88700);
+                }
+                &:nth-child(4) {
+                    @include option-style(#26890c, #20750a);
+                }
+                &:nth-child(2n) {
+                    margin-right: 0px;
+                }
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ffffff00;
+                    border-radius: $border-radius;
+                    transition: background-color .2s linear,
+                                transform 0.05s linear;
+                }
+                &:hover::after {
+                    background-color: #ffffff3a;
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}

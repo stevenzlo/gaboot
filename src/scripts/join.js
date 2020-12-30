@@ -32,7 +32,12 @@ function joinQuiz(deck, firebase) {
                 hostedQuizDocRef.get()
                     .then(doc => {
                         const currentUsers = doc.data().users;
-                        currentUsers.push(name);
+                        const newUser = {
+                            answers: [],
+                            id: currentUsers.length,
+                            name: name
+                        }
+                        currentUsers.push(newUser);
                         hostedQuizDocRef
                             .set({
                                 users: currentUsers
