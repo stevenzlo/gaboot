@@ -17,6 +17,7 @@ var quizList = require('./quiz-list');
 var firebaseAuth = require('./firebase-auth');
 var editQuiz = require('./edit-quiz');
 var snackbar = require('./snackbar');
+var hostQuiz = require('./host-quiz');
 
 const main = () => {
   snackbar.run();
@@ -45,6 +46,7 @@ const main = () => {
   createQuiz.run(deck, firebase);
   quizList.run(deck, firebaseAuth.signOut);
   editQuiz.run(deck);
+  hostQuiz.run(deck);
 }
 
 export default main;
