@@ -486,3 +486,21 @@ Yang akan dikerjakan besok:
 - Membut halaman host kuis
 Masalah yang dihadapi:
 - -
+
+Hari ke-3 (31 Desember 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Sinkronisasi data di database dengan tampilan di lobby quiz
+- Penambahan pemilihan jawaban pada halaman tampilan ketika kuis berlangsung
+Yang akan dikerjakan besok:
+- Listen pada perubahan data di database
+Masalah yang dihadapi:
+- -
+
+Steven:
+Yang dikerjakan hari ini:
+- Membuat halaman host kuis
+Yang akan dikerjakan besok:
+- Membuat fungsionalitas pada halaman host kuis
+Masalah yang dihadapi:
+- -
