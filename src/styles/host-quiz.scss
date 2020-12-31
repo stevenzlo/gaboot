@@ -1,0 +1,35 @@
+#host-quiz {
+  align-items: initial;
+  justify-content: initial;
+  padding: 16px;
+  .host-quiz__top-bar {
+    display: flex;
+    width: 100%;
+    > * {
+      flex-grow: 1;
+    }
+    * {
+        color: #fff;
+    }
+    .host__title {
+      margin: 0;
+      text-align: right;
+    }
+    .host-quiz__button-container {
+      text-align: right;
+    }
+  }
+  .game__pin-container {
+    text-align: center;
+    .game__pin-card {
+      display: inline-block;
+      padding: 0 16px;
+      width: 300px;
+    }
+    margin-bottom: 16px;
+  }
+  .joined__players-card {
+    padding: 16px;
+    height: 250px;
+  }
+}

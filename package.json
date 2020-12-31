@@ -48,6 +48,7 @@
     "@material/banner": "^8.0.0",
     "@material/button": "^8.0.0",
     "@material/card": "^8.0.0",
+    "@material/chips": "^9.0.0",
     "@material/data-table": "^8.0.0",
     "@material/dialog": "^8.0.0",
     "@material/snackbar": "^8.0.0",

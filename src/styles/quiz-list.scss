@@ -4,11 +4,10 @@ $action-button-color: #f44336;
   align-items: initial;
   justify-content: initial;
   padding: 16px;
-  .nav-button {
+  .quiz-list__top-bar {
     display: flex;
     justify-content: flex-end;
     * {
-        font-size: 0.85em;
         color: #fff;
     }
   }

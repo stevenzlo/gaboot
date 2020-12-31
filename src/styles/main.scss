@@ -23,6 +23,7 @@ $danger-color: #e55353;
 @use "@material/snackbar/mdc-snackbar";
 @use "@material/snackbar";
 @use "@material/banner/styles";
+@use "@material/chips/mdc-chips";
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;
@@ -38,9 +39,8 @@ $danger-color: #e55353;
 @import "./quiz-list";
 @import "./join-dashboard.scss";
 @import "./edit-quiz";
-<<<<<<< HEAD
 @import "./answer-quiz";
-=======
+@import "./host-quiz";
 
 .mdc-snackbar.snackbar-success {
   @include snackbar.fill-color($success-color);
@@ -53,4 +53,3 @@ $danger-color: #e55353;
     @include snackbar.position-leading();
   }
 }
->>>>>>> 6b07004c9224d2fe14f68fe464d493be1ee84c83
