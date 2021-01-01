@@ -7,13 +7,27 @@ $option-height: 50px;
     background: $background;
     height: $option-height;
 }
-  
 
 #answer-quiz {
     .answer-quiz {
-        &__question {
+        &__number {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #fff;
             font-size: 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 2px 0px 0px #cdcdcd;
+        }
+        &__message {
+            display: none;
             color: #fff;
+            font-size: 1.5em;
+            &--shown {
+                display: block;
+            }
         }
         &__options {
             width: 90%;
@@ -30,9 +44,10 @@ $option-height: 50px;
                 flex-basis: calc(50% - 8px);
                 padding: 16px;
                 border-radius: $border-radius;
+                border: none;
                 color: #fff;
                 cursor: pointer;
-                transform-origin: 123.5px 32.5px;
+                transition: background-color 0.2s linear;
                 &:nth-child(1) {
                     @include option-style(#e21b3c, #c01733);
                 }
@@ -65,6 +80,34 @@ $option-height: 50px;
                 }
                 &:active {
                     transform: scale(0.95);
+                }
+                &:not(.answer-quiz__options--choosable--chosen):not(.answer-quiz__options--choosable--correct):disabled {
+                    @include option-style(#474747, #757575);
+                    pointer-events: none;
+                    cursor: default;
+                }
+                &--chosen:disabled {
+                    pointer-events: none;
+                    cursor: default;
+                    &::after {
+                        background-color: #ffffff3a;
+                    }
+                }
+                &--correct {
+                    transform: scale(1.05);
+                    pointer-events: none;
+                    cursor: default;
+                    &::before {
+                        content: '';
+                        background-image: url('../images/green-tick-mark.png');
+                        background-size: 20px 20px;
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        right: 10px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
                 }
             }
         }

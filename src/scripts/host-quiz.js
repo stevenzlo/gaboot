@@ -1,5 +1,5 @@
 const quiz = require('./quiz');
-const MDCChipSet = require('@material/chips').MDCChipSet;
+// const MDCChipSet = require('@material/chips').MDCChipSet;
 
 function makeid(length) {
   var result = '';
@@ -12,8 +12,8 @@ function makeid(length) {
 }
 
 function run() {
-  const chipSetEl = document.querySelector('#host-quiz .mdc-chip-set');
-  const chipSet = new MDCChipSet(chipSetEl);
+  // const chipSetEl = document.querySelector('#host-quiz .mdc-chip-set');
+  // const chipSet = new MDCChipSet(chipSetEl);
   
 }
 

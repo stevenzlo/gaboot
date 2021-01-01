@@ -504,3 +504,39 @@ Yang akan dikerjakan besok:
 - Membuat fungsionalitas pada halaman host kuis
 Masalah yang dihadapi:
 - -
+
+Sprint Review
+Iterasi ke-4:
+1. Mengakses kuis yang telah dibuat (done)
+Sebagai seorang pembuat kuis, saya dapat mengakses kuis-kuis yang telah saya buat sehingga saya dapat memilih kuis yang akan diadakan
+Definition of done:
+- Terdapat halaman yang menampilkan daftar kuis yang telah dibuat (done)
+- Halaman menampilkan daftar kuis yang telah dibuat dengan benar (done)
+- Terdapat daftar kuis yang telah dibuat yang tersimpan di database (done)
+Member: Steven
+
+2. Mengedit kuis (done)
+Sebagai seorang pembuat kuis, saya dapat mengedit kuis beserta pertanyaan yang sudah ada sehingga saya dapat memperbaiki kesalahan atau koreksi terhadap pertanyaan sebelumnya.
+Definition of done:
+- Terdapat halaman kuis beserta pertanyaan dan jawaban yang telah dikonfigurasi sebelumnya (done)
+- Pertanyaan yang di-edit telah disimpan dengan benar (done)
+Member: Steven
+
+3. Mengikuti kuis (done)
+Sebagai seorang pengambil kuis, saya dapat memilih jawaban atas pertanyaan yang diberikan sehingga saya dapat mengikuti kuis dengan baik
+Definition of done:
+- Terdapat halaman untuk memasukkan ID kuis untuk memasuki halaman tunggu (done)
+- Terdapat halaman tunggu ketika kuis belum dimulai (done)
+- Pertanyaan ditampilkan dengan benar ketika kuis dimulai (done)
+- Jawaban dapat dipilih (done)
+- Jawaban direkam dengan benar (done)
+- Jawaban benar ditampilkan (done)
+Member: Richard, Steven
+
+4. Mengadakan kuis (return to backlog)
+Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
+Definition of done:
+- Terdapat halaman untuk mengadakan kuis (done)
+- Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis (done)
+- Kuis ditandai sebagai sedang diadakan di database (not yet)
+Member: Richard, Steven

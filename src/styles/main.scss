@@ -23,7 +23,6 @@ $danger-color: #e55353;
 @use "@material/snackbar/mdc-snackbar";
 @use "@material/snackbar";
 @use "@material/banner/styles";
-@use "@material/chips/mdc-chips";
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;
@@ -40,7 +39,7 @@ $danger-color: #e55353;
 @import "./join-dashboard.scss";
 @import "./edit-quiz";
 @import "./answer-quiz";
-@import "./host-quiz";
+@import "./quiz-ended.scss";
 
 .mdc-snackbar.snackbar-success {
   @include snackbar.fill-color($success-color);

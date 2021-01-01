@@ -17,6 +17,7 @@ var quizList = require('./quiz-list');
 var firebaseAuth = require('./firebase-auth');
 var editQuiz = require('./edit-quiz');
 var snackbar = require('./snackbar');
+var joinDashboard = require('./join-dashboard');
 var hostQuiz = require('./host-quiz');
 
 const main = () => {

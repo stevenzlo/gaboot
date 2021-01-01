@@ -14,13 +14,13 @@
   <body>
     <article class="deck">
       <section id="join" class="rainbow-bg">
-        <div id="join__invalid-game-pin-banner" class="mdc-banner" role="banner">
+        <div id="join__banner" class="mdc-banner" role="banner">
           <div class="mdc-banner__content"
                role="status"
                aria-live="assertive">
             <div class="mdc-banner__graphic-text-wrapper">
-              <div class="mdc-banner__text">
-                The game PIN you input did not exist
+              <div id="join__banner--message" class="mdc-banner__text">
+                Some error occurred
               </div>
             </div>
             <div class="mdc-banner__actions">
@@ -148,7 +148,7 @@
       </section>
 
       <section id="quiz-list" class="rainbow-bg mdc-typography">
-        <div class="quiz-list__top-bar">
+        <div class="nav-button">
           <button id="list__create-button" class="mdc-button">
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">Create Quiz</span>
@@ -208,9 +208,7 @@
 
       <section id="join-dashboard" class="rainbow-bg">
         <h1 class="join-dashboard__title">Waiting for host to start...</h1>
-        <main class="join-dashboard__lobby">
-          <div class="join-dashboard__lobby--member">Richard</div>
-          <div class="join-dashboard__lobby--member">Steven</div>
+        <main id="join-dashboard__lobby" class="join-dashboard__lobby">
         </main>
       </section>
 
@@ -263,76 +261,21 @@
       </section>
 
       <section id="answer-quiz" class="rainbow-bg">
-        <h1 class="answer-quiz__question">What is something?</h1>
+        <h1 id="answer-quiz__number" class="answer-quiz__number"></h1>
+        <h2 id="answer-quiz__message" class="answer-quiz__message">Waiting for the correct answer...</h2>
         <main class="answer-quiz__options">
-          <div class="answer-quiz__options--choosable">Option 1</div>
-          <div class="answer-quiz__options--choosable">Option 2</div>
-          <div class="answer-quiz__options--choosable">Option 3</div>
-          <div class="answer-quiz__options--choosable">Option 4</div>
+          <button class="answer-quiz__options--choosable"></button>
+          <button class="answer-quiz__options--choosable"></button>
+          <button class="answer-quiz__options--choosable"></button>
+          <button class="answer-quiz__options--choosable"></button>
         </main>
       </section>
 
-      <section id="host-quiz" class="rainbow-bg">
-        <div class="host-quiz__top-bar">
-          <div class="host-quiz__player-container mdc-typography">
-            <i class="material-icons" aria-hidden="true">person</i>
-            <span class="mdc-typography--headline3">0</span>
-          </div>
-          <h1 class="host__title">Gaboot!</h1>
-          <div class="host-quiz__button-container">
-            <button id="host__cancel-button" class="mdc-button">
-              <div class="mdc-button__ripple"></div>
-              <span class="mdc-button__label">Cancel</span>
-            </button>
-            <button id="host__start-button" class="mdc-button mdc-button--raised">
-              <span class="mdc-button__label">Start</span>
-            </button>
-          </div>
-        </div>
-        <div class="game__pin-container">
-          <div class="mdc-card game__pin-card">
-            <h2><strong>Game Pin: <span id="game__pin">-</span></strong></h2>
-          </div>
-        </div>
-        <div class="mdc-card joined__players-card">
-          <span>Waiting for players...</span>
-          <div class="mdc-chip-set" role="grid">
-            <div class="mdc-chip" role="row">
-              <div class="mdc-chip__ripple"></div>
-              <span role="gridcell">
-                <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                  <span class="mdc-chip__text">Chip One</span>
-                </span>
-              </span>
-            </div>
-            <div class="mdc-chip" role="row">
-              <div class="mdc-chip__ripple"></div>
-              <span role="gridcell">
-                <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                  <span class="mdc-chip__text">Chip One</span>
-                </span>
-              </span>
-            </div>
-            <div class="mdc-chip" role="row">
-              <div class="mdc-chip__ripple"></div>
-              <span role="gridcell">
-                <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                  <span class="mdc-chip__text">Chip One</span>
-                </span>
-              </span>
-            </div>
-            <div class="mdc-chip" role="row">
-              <div class="mdc-chip__ripple"></div>
-              <span role="gridcell">
-                <span role="button" tabindex="0" class="mdc-chip__primary-action">
-                  <span class="mdc-chip__text">Chip One</span>
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
+      <section id="quiz-ended" class="rainbow-bg">
+        <h1>Thank you for participating in Gaboot!</h1>
       </section>
 
+      <div class="mdc-snackbar mdc-snackbar--leading">
       <div class="mdc-snackbar">
         <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
           <div class="mdc-snackbar__label" aria-atomic="false">
