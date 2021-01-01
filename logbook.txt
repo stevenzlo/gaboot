@@ -87,6 +87,20 @@ Definition of done:
 - Sistem merekam jawaban dan poin-poin pengambil kuis di database
 Estimasi waktu: 16 jam
 
+11. Input title dan deskripsi
+Sebagai seorang pembuat kuis, saya dapat mengisi title dan deskripsi agar pada daftar kuis, dapat dibedakan antara satu dengan yang lainnya.
+Definition of done:
+- Terdapat pop up untuk meminta title dan deskripsi saat selesai membuat kuis
+- Title dan deskripsi disimpan dengan baik di database
+Estimasi waktu: 4 jam
+
+12. Tombol aksi 'Delete' pada konfirmasi Hapus Kuis
+Sebagai seorang pembuat kuis, saya dapat memilih untuk batal menghapus kuis sehingga proses penghapusan kuis hanya dijalankan saat saya memilih tombol 'Delete'
+Definition of done:
+- Terdapat pop up konfirmasi penghapusan kuis
+- Penghapusan kuis dari database hanya dijalankan apabila tombol aksi 'Delete' dipilih
+Estimasi waktu: 4 jam
+
 Sprint
 Iterasi ke-1:
 1. Login
@@ -540,3 +554,61 @@ Definition of done:
 - Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis (done)
 - Kuis ditandai sebagai sedang diadakan di database (not yet)
 Member: Richard, Steven
+
+Sprint
+Interasi ke-5:
+1. Mengadakan kuis
+Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
+Definition of done:
+- Terdapat halaman untuk mengadakan kuis (done)
+- Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis (done)
+- Kuis ditandai sebagai sedang diadakan di database
+Member: Richard, Steven
+
+2. Memulai kuis
+Sebagai seorang pembuat kuis, saya dapat memulai kuis yang telah diadakan sehingga saya dapat merekam jawaban yang diberikan oleh pengambil kuis terhadap pertanyaan-pertanyaan yang ada
+Definition of done:
+- Terdapat halaman untuk memulai kuis
+- Terdapat halaman untuk menampilkan pertanyaan, pilihan, dan timer saat kuis berlangsung
+- Terdapat halaman untuk memilih jawaban saat kuis berlangsung
+- Kuis menampilkan jawaban yang benar ketika waktu memilih jawaban telah habis
+- Kuis ditandai sebagai telah dimulai di database
+Member: Steven
+
+3. Melihat peringkat
+Sebagai seorang pembuat kuis, saya dapat menampilkan peringkat pengambil kuis sehingga suasana kompetitif saat kuis diambil tercipta
+Definition of done:
+- Terdapat halaman untuk menunjukkan peringkat saat kuis berlangsung dan berakhir
+- Sistem merekam jawaban dan poin-poin pengambil kuis di database
+Member: Richard
+
+4. Input title dan deskripsi
+Sebagai seorang pembuat kuis, saya dapat mengisi title dan deskripsi agar pada daftar kuis, dapat dibedakan antara satu dengan yang lainnya.
+Definition of done:
+- Terdapat pop up untuk meminta title dan deskripsi saat selesai membuat kuis
+- Title dan deskripsi disimpan dengan baik di database
+
+5. Tombol aksi 'Delete' pada konfirmasi Hapus Kuis
+Sebagai seorang pembuat kuis, saya dapat memilih untuk batal menghapus kuis sehingga proses penghapusan kuis hanya dijalankan saat saya memilih tombol 'Delete'
+Definition of done:
+- Terdapat pop up konfirmasi penghapusan kuis
+- Penghapusan kuis dari database hanya dijalankan apabila tombol aksi 'Delete' dipilih
+
+Hari ke-1 (1 Januari 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Listen terhadap semua perubahan data di database yang berkaitan dengan mengikuti kuis dan mengupdate UI sesuai perubahan yang ada
+Yang akan dikerjakan besok:
+- Membuat tampilan scoreboard
+- Menampilkan scoreboard dengan data dari database
+Masalah yang dihadapi:
+- -
+
+Steven:
+Yang dikerjakan hari ini:
+- Update semua fungsionalitas host kuis
+Yang akan dikerjakan besok:
+- Membuat halaman memulai kuis
+- Menyelesaikan masalah tombol aksi pada pop up konfirmasi penghapusan
+Masalah yang dihadapi:
+- -
