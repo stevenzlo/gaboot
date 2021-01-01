@@ -31,5 +31,17 @@
   .joined__players-card {
     padding: 16px;
     height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #joined__players-chip-set {
+      > .mdc-chip {
+        cursor: default;
+        &.player:hover {
+          cursor: pointer;
+          text-decoration: line-through;
+        }
+      }
+    }
   }
 }

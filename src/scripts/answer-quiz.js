@@ -20,7 +20,7 @@ function run(deck, firebase) {
             const activeQuestion = snapshot.data().activeQuestion;
             const quizEnded = !snapshot.data().started;
             if (quizEnded) {
-                deck.slide(8);
+                deck.slide(9);
                 unsubscribe();
             }
             if (currentQuestionIndex !== activeQuestion.index) {

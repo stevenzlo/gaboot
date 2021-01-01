@@ -2,6 +2,7 @@ const quiz = require('./quiz');
 const MDCDialog = require('@material/dialog').MDCDialog;
 const editQuiz = require('./edit-quiz');
 const snackbar = require('./snackbar');
+const hostQuiz = require('./host-quiz');
 let quizDeleteDialog;
 
 function run(deck, signOutCallback) {
@@ -32,7 +33,7 @@ function refreshQuizList(querySnapshot, deck) {
           <td class="mdc-data-table__cell">${data['description']}</td>
           <td class="mdc-data-table__cell text-center">${data['playsCount']}</td>
           <td class="mdc-data-table__cell text-center">
-            <button class="mdc-button mdc-button--raised" data-id="${doc.id}">
+            <button class="mdc-button mdc-button--raised list__host-button" data-id="${doc.id}">
               <span class="mdc-button__label">Host</span>
             </button>
           </td>
@@ -50,6 +51,7 @@ function refreshQuizList(querySnapshot, deck) {
     })
     const allDeleteButton = document.querySelectorAll('.list__delete-button');
     const allEditButton = document.querySelectorAll('.list__edit-button');
+    const allHostButton = document.querySelectorAll('.list__host-button');
     allDeleteButton.forEach((element) => {
       element.addEventListener('click', () => {
         const quizDeleteTitle = document.querySelector('#quiz__delete-title');
@@ -72,6 +74,11 @@ function refreshQuizList(querySnapshot, deck) {
         element.addEventListener('click', () => {
           editQuiz.refreshQuestionList(element.dataset.id, deck);
           deck.slide(6);
+        });
+      })
+      allHostButton.forEach((element) => {
+        element.addEventListener('click', () => {
+          hostQuiz.refreshHostedQuiz(element.dataset.id, deck);
         });
       })
     });

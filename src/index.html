@@ -148,7 +148,7 @@
       </section>
 
       <section id="quiz-list" class="rainbow-bg mdc-typography">
-        <div class="nav-button">
+        <div class="quiz-list__top-bar">
           <button id="list__create-button" class="mdc-button">
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">Create Quiz</span>
@@ -269,6 +269,41 @@
           <button class="answer-quiz__options--choosable"></button>
           <button class="answer-quiz__options--choosable"></button>
         </main>
+      </section>
+
+      <section id="host-quiz" class="rainbow-bg">
+        <div class="host-quiz__top-bar">
+          <div class="host-quiz__player-container mdc-typography">
+            <i class="material-icons" aria-hidden="true">person</i>
+            <span class="mdc-typography--headline3" id="joined__players-count">0</span>
+          </div>
+          <h1 class="host__title">Gaboot!</h1>
+          <div class="host-quiz__button-container">
+            <button id="host__cancel-button" class="mdc-button">
+              <div class="mdc-button__ripple"></div>
+              <span class="mdc-button__label">Cancel</span>
+            </button>
+            <button id="host__start-button" class="mdc-button mdc-button--raised" disabled>
+              <span class="mdc-button__label">Start</span>
+            </button>
+          </div>
+        </div>
+        <div class="game__pin-container">
+          <div class="mdc-card game__pin-card">
+            <h2><strong>Game Pin: <span id="game__pin">-</span></strong></h2>
+          </div>
+        </div>
+        <div class="mdc-card joined__players-card">
+          <div id="joined__players-chip-set" class="mdc-chip-set" role="grid">
+            <div class="mdc-chip" role="row">
+              <div class="mdc-chip__ripple"></div>
+              <span role="gridcell">
+                <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                  <span class="mdc-chip__text">Waiting for players...</span>
+                </span>
+              </span>
+            </div>
+        </div>
       </section>
 
       <section id="quiz-ended" class="rainbow-bg">
