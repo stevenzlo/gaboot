@@ -1,4 +1,6 @@
 const MDCRipple = require('@material/ripple').MDCRipple;
+const MDCBanner = require('@material/banner').MDCBanner;
+const banner = new MDCBanner(document.querySelector('#edit-quiz__banner'));
 const quiz = require('./quiz');
 const snackbar = require('./snackbar');
 const ol = document.querySelector('ol.edit-quiz__list');
@@ -36,7 +38,7 @@ function run(deck) {
 
 function editNewEmptyQuestion() {
   return {
-    'number': questions.length + 1,
+    'number': questions.length,
     'question': '',
     'timer': 20,
     'options': ['', '', '', ''],
@@ -87,15 +89,15 @@ function initializeQuestionInput() {
     if (optionOneCheck.checked)
       questions[currentQuestionIndex].correct = 0;
   })
-  optionOneCheck.addEventListener('change', e => {
+  optionTwoCheck.addEventListener('change', e => {
     if (optionTwoCheck.checked)
       questions[currentQuestionIndex].correct = 1;
   })
-  optionOneCheck.addEventListener('change', e => {
+  optionThreeCheck.addEventListener('change', e => {
     if (optionThreeCheck.checked)
       questions[currentQuestionIndex].correct = 2;
   })
-  optionOneCheck.addEventListener('change', e => {
+  optionFourCheck.addEventListener('change', e => {
     if (optionFourCheck.checked)
       questions[currentQuestionIndex].correct = 3;
   })
@@ -151,7 +153,7 @@ function editListPreviewQuestion(newQuestion) {
   li.innerHTML = `
     <div class="edit-quiz__list__item--left">
         <p>${newQuestion.number + 1}</p>
-        <img src="https://i.imgur.com/etf85Lw.png" alt="Delete">
+        <img id="edit-quiz__list__item--left__delete" src="https://i.imgur.com/etf85Lw.png" alt="Delete">
     </div>
     <div class="edit-quiz__list__item--right">
         <p>Quiz</p>
@@ -163,10 +165,10 @@ function editListPreviewQuestion(newQuestion) {
                 ${newQuestion.timer}
             </p>
             <div class="edit-quiz__list__item--right__options">
-                <div>${newQuestion.options[0]}</div>
-                <div>${newQuestion.options[1]}</div>
-                <div>${newQuestion.options[2]}</div>
-                <div>${newQuestion.options[3]}</div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
         </div>
     </div>
@@ -176,12 +178,17 @@ function editListPreviewQuestion(newQuestion) {
 }
 
 function addListPreviewListener(listPreview) {
-  listPreview.addEventListener('click', e => {
+  const clickPreviewHandler = () => {
     removeCurrentActiveListPreview();
     listPreview.classList.add('edit-quiz__list__item--active');
     const clickedIndex = Array.from(listPreview.parentNode.children).indexOf(listPreview);
     changeCurrentQuestionTo(clickedIndex);
-  })
+  };
+  listPreview.addEventListener('click', clickPreviewHandler);
+  listPreview.querySelector('#edit-quiz__list__item--left__delete').addEventListener('click', e => {
+      listPreview.removeEventListener('click', clickPreviewHandler);
+      removeQuestion(listPreview);
+  });
   listPreview.click();
 }
 
@@ -205,11 +212,11 @@ function changeCurrentQuestionTo(index) {
   const currentCorrectAnswer = currentQuestion.correct;
   if (currentCorrectAnswer === 0) {
     optionOneCheck.checked = true;
-  } else if (currentCorrectAnswer == 2) {
+  } else if (currentCorrectAnswer == 1) {
     optionTwoCheck.checked = true;
-  } else if (currentCorrectAnswer == 3) {
+  } else if (currentCorrectAnswer == 2) {
     optionThreeCheck.checked = true;
-  } else if (currentCorrectAnswer == 4) {
+  } else if (currentCorrectAnswer == 3) {
     optionFourCheck.checked = true;
   } else {
     optionOneCheck.checked = false;
@@ -224,6 +231,27 @@ function removeCurrentActiveListPreview() {
     if (activeLi) activeLi.classList.remove('edit-quiz__list__item--active');
 }
 
+function removeQuestion(liToRemove) {
+  const liLength = document.querySelectorAll('.edit-quiz__list__item').length;
+  console.log(liLength);
+  if (liLength === 1) {
+      banner.open();
+      return;
+  }
+  const allLis = document.querySelectorAll('.edit-quiz__list__item');
+  const indexOfLiToRemove = Array.from(allLis).indexOf(liToRemove);
+  if (currentQuestionIndex === indexOfLiToRemove) {
+      const isLiEmpty = document.querySelectorAll('.edit-quiz__list__item').length === 0;
+      if (!isLiEmpty) {
+          currentQuestionIndex = 0;
+          changeCurrentQuestionTo(0);
+          Array.from(allLis)[0].click();
+      }
+  }
+  liToRemove.parentNode.removeChild(liToRemove);
+  questions.splice(indexOfLiToRemove, 1);
+}
+
 function saveQuiz(quizId, deck) {
   const db = firebase.firestore();
   if (firebase.auth().currentUser.uid && quizId) {
@@ -233,7 +261,7 @@ function saveQuiz(quizId, deck) {
         number: index,
         question: question.question,
         correctAnswer: question.correct,
-        timer: question.timer,
+        timer: parseInt(question.timer),
         options: question.options.map(option => option)
       };
     });

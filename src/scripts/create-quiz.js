@@ -123,10 +123,10 @@ function createListPreviewQuestion(newQuestion) {
                     ${newQuestion.timer}
                 </p>
                 <div class="create-quiz__list__item--right__options">
-                    <div>${newQuestion.options[0]}</div>
-                    <div>${newQuestion.options[1]}</div>
-                    <div>${newQuestion.options[2]}</div>
-                    <div>${newQuestion.options[3]}</div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
                 </div>
             </div>
         </div>
@@ -138,7 +138,7 @@ function createListPreviewQuestion(newQuestion) {
 function addListPreviewListener(listPreview) {
     const clickPreviewHandler = () => {
         removeCurrentActiveListPreview();
-        listPreview.classList.add('create-quiz__list__item--active');
+        listPreview.classList.add('.create-quiz__list__item--active');
         const clickedIndex = Array.from(listPreview.parentNode.children).indexOf(listPreview);
         changeCurrentQuestionTo(clickedIndex);
     };

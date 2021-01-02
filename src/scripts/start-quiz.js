@@ -69,6 +69,7 @@ function startQuiz(quizId, gameId, deck) {
         startQuizQuestionLeft.innerHTML = `${currentQuestionIndex + 1}/${doc.data()['questions'].length}`;
         console.log(prevQuestionIndex, currentQuestionIndex);
         if (prevQuestionIndex !== undefined && currentQuestionIndex !== prevQuestionIndex) {
+          prevQuestionIndex = currentQuestionIndex;
           timer = doc.data()['questions'][currentQuestionIndex]['timer'] + 1;
           nextButton.disabled = true;
           timerInterval = setInterval(() => {
@@ -84,7 +85,6 @@ function startQuiz(quizId, gameId, deck) {
                 }
               });
               startQuizTimer.innerHTML = '-';
-              prevQuestionIndex = currentQuestionIndex;
               clearInterval(timerInterval);
               nextButton.disabled = false;
               nextButtonListener = () => {
