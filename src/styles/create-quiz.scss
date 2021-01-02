@@ -1,3 +1,6 @@
+@use "@material/floating-label/mdc-floating-label";
+@use "@material/line-ripple/mdc-line-ripple";
+@use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
 
 $quiz-preview-border-color: rgb(229, 229, 229);
@@ -43,6 +46,21 @@ $input-background: #f7f7f7;
     padding: 16px;
     button {
       margin-left: 8px;
+    }
+  }
+  .create-quiz__dialog {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-family: 'Open Sans', arial;
+      font-size: 2em;
+    }
+    &__metadata {
+      .mdc-floating-label--float-above {
+        transform: translateY(-19.75px) scale(0.75);
+      }
+      height: 30px;
+      margin-top: 16px;
     }
   }
   main {
