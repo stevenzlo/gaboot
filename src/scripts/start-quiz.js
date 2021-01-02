@@ -42,7 +42,6 @@ function startQuiz(quizId, gameId, deck) {
   const unsubscribeQuizUserRef = hostedQuizDocRef.collection('user').onSnapshot(querySnapshot => {
     updateTotalAnswer(querySnapshot);
   });
-  prevQuestionIndex = -1;
   hostedQuizDocRef.update({
     'started': true,
     'active': false,
@@ -51,6 +50,9 @@ function startQuiz(quizId, gameId, deck) {
       'timedOut': false
     }
   }).then(() => {
+    prevQuestionIndex = -1;
+    currentQuestionIndex = 0;
+    timer = undefined;
     deck.slide(11);
   });
   const unsubscribeQuizDocRef = hostedQuizDocRef
