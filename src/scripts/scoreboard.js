@@ -34,7 +34,13 @@ function run(deck, firebase, gameId) {
             console.error(error);
         });
 }
-
+function init(deck) {
+    const listQuizButton = document.querySelector('#scoreboard__top-bar--list-quiz-button');
+    listQuizButton.addEventListener('click', () => {
+        deck.slide(4);
+    });
+}
 module.exports = {
-    run: run
+    run: run,
+    init: init
 };
