@@ -27,6 +27,7 @@ $danger-color: #e55353;
 @include button.core-styles;
 @include textfield.core-styles;
 @include data-table.core-styles;
+@include data-table.theme-baseline;
 @include card.core-styles;
 @include dialog.core-styles;
 @import "normalizecss/normalize.css";
@@ -42,6 +43,7 @@ $danger-color: #e55353;
 @import "./answer-quiz";
 @import "./host-quiz.scss";
 @import "./quiz-ended.scss";
+@import "./scoreboard.scss";
 
 .mdc-snackbar.snackbar-success {
   @include snackbar.fill-color($success-color);

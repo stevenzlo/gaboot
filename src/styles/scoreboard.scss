@@ -1,0 +1,34 @@
+#scoreboard {
+    .scoreboard {
+        &__title {
+            color: #fff;
+        }
+        &__table {
+            width: 70%;
+            border: none;
+            max-height: 60%;
+            > div {
+                scrollbar-width: thin;
+            }
+            &__header-row {
+                background: $primary;
+                &__cell  {
+                    background: $primary;
+                    color: $on-primary;
+                    &:nth-child(1) {
+                        width: 1em;
+                    }
+                    &:nth-child(3) {
+                        width: 1em;
+                    }
+                }
+            }
+            .mdc-data-table__cell--numeric {
+                text-align: center;
+            }
+            .mdc-data-table__header-cell--numeric {
+                text-align: center;
+            }
+        }
+    }
+}
