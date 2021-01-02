@@ -18,6 +18,7 @@ function run(firebase) {
 				return true;
 			}
 		},
+		signInFlow: 'popup',
 		signInSuccessUrl: `${window.location.origin}/#dashboard`,
 		signInOptions: [
 			firebase.auth.GoogleAuthProvider.PROVIDER_ID
