@@ -42,7 +42,6 @@ function startQuiz(quizId, gameId, deck) {
   const unsubscribeQuizUserRef = hostedQuizDocRef.collection('user').onSnapshot(querySnapshot => {
     updateTotalAnswer(querySnapshot);
   });
-  prevQuestionIndex = -1;
   hostedQuizDocRef.update({
     'started': true,
     'active': false,
@@ -51,6 +50,9 @@ function startQuiz(quizId, gameId, deck) {
       'timedOut': false
     }
   }).then(() => {
+    prevQuestionIndex = -1;
+    currentQuestionIndex = 0;
+    timer = undefined;
     deck.slide(11);
   });
   const unsubscribeQuizDocRef = hostedQuizDocRef
@@ -69,6 +71,7 @@ function startQuiz(quizId, gameId, deck) {
         startQuizQuestionLeft.innerHTML = `${currentQuestionIndex + 1}/${doc.data()['questions'].length}`;
         console.log(prevQuestionIndex, currentQuestionIndex);
         if (prevQuestionIndex !== undefined && currentQuestionIndex !== prevQuestionIndex) {
+          prevQuestionIndex = currentQuestionIndex;
           timer = doc.data()['questions'][currentQuestionIndex]['timer'] + 1;
           nextButton.disabled = true;
           timerInterval = setInterval(() => {
@@ -84,7 +87,6 @@ function startQuiz(quizId, gameId, deck) {
                 }
               });
               startQuizTimer.innerHTML = '-';
-              prevQuestionIndex = currentQuestionIndex;
               clearInterval(timerInterval);
               nextButton.disabled = false;
               nextButtonListener = () => {
