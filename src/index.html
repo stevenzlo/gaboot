@@ -290,7 +290,7 @@
         </div>
         <div class="game__pin-container">
           <div class="mdc-card game__pin-card">
-            <h2><strong>Game Pin: <span id="game__pin">-</span></strong></h2>
+            <h2><strong>GAME PIN: <span id="game__pin">-</span></strong></h2>
           </div>
         </div>
         <div class="mdc-card joined__players-card">
@@ -326,6 +326,31 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section id="start-quiz" class="rainbow-bg">
+        <div class="start-quiz__top-bar">
+          <button id="start-quiz__top-bar--next-button" class="mdc-button mdc-button--raised">
+            <span class="mdc-button__label" disabled>Next</span>
+          </button>
+        </div>
+        <div class="start-quiz__question-container">
+          <input type="text" id="start-quiz__input--question" class="start-quiz__input--question" readonly>
+        </div>
+        <div class="start-quiz__timer-container mdc-typography">
+          <div class="start-quiz__timer mdc-typography--headline3">-</div>
+          <div class="start-quiz__answered mdc-typography--headline5">0<br>Answers</div>
+        </div>
+        <main class="start-quiz__options">
+          <button class="start-quiz__options--choosable"></button>
+          <button class="start-quiz__options--choosable"></button>
+          <button class="start-quiz__options--choosable"></button>
+          <button class="start-quiz__options--choosable"></button>
+        </main>
+        <div class="start-quiz__footer">
+          <div id="start-quiz__question-left">1/1</div>
+          <div id="start-quiz__game-pin">GAME PIN: -</div>
         </div>
       </section>
 

@@ -150,7 +150,7 @@ function editListPreviewQuestion(newQuestion) {
   li.classList.add('edit-quiz__list__item');
   li.innerHTML = `
     <div class="edit-quiz__list__item--left">
-        <p>${newQuestion.number}</p>
+        <p>${newQuestion.number + 1}</p>
         <img src="https://i.imgur.com/etf85Lw.png" alt="Delete">
     </div>
     <div class="edit-quiz__list__item--right">
@@ -230,7 +230,7 @@ function saveQuiz(quizId, deck) {
     const uid = firebase.auth().currentUser.uid;
     const questionsToInsert = questions.map((question,index) => {
       return {
-        number: index + 1,
+        number: index,
         question: question.question,
         correctAnswer: question.correct,
         timer: question.timer,

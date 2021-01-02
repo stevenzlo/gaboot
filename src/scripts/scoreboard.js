@@ -1,7 +1,7 @@
-function run(deck, firebase) {
+function run(deck, firebase, gameId) {
     const db = firebase.firestore();
     const tableContent = document.querySelector('#scoreboard__table__content');
-    const joinedGame = sessionStorage.getItem('joinedGame');
+    const joinedGame = gameId;
     db
         .collection('hosted-quiz')
         .doc(joinedGame)

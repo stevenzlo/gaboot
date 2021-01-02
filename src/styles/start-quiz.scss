@@ -1,0 +1,157 @@
+$option-height: 50px;
+$question-input-height: 50px;
+
+@mixin option-style($background: #fff, $box-shadow-color: #CDCDCD) {
+  border-radius: $border-radius;
+  box-shadow: 0px 4px 0px 0px $box-shadow-color;
+  padding: 8px;
+  background: $background;
+  height: $option-height;
+}
+
+@mixin input-style($background: #fff, $box-shadow-color: #CDCDCD) {
+  border-radius: 5px;
+  box-shadow: 0px 4px 0px 0px $box-shadow-color;
+  padding: 8px;
+  border: none;
+  background: $background;
+  height: $question-input-height;
+}
+
+#start-quiz {
+  flex-direction: column;
+  align-items: initial;
+  justify-content: initial;
+  padding: 16px;
+  .start-quiz {
+    &__top-bar {
+      display: flex;
+      justify-content: flex-end;
+      * {
+          color: #fff;
+      }
+    }
+    &__question-container {
+      text-align: center;
+      margin-top: 50px;
+      input {
+        outline: none;
+      }
+      #start-quiz__input--question {
+        width: 90%;
+        text-align: center;
+        font-size: 1.75em;
+        margin-bottom: 16px;
+        @include input-style;
+      }
+    }
+    &__timer-container {
+      margin: 20px 0;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      .start-quiz__timer {
+        text-align: center;
+        line-height: 80px;
+        width: 80px;
+        border-radius: 40px;
+        background-color: white;
+      }
+      .start-quiz__answered {
+        text-align: center;
+        color: white;
+        font-weight: bolder;
+      }
+    }
+    &__options {
+      padding: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      &--choosable {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-right: 16px;
+        margin-bottom: 20px;
+        flex-basis: calc(50% - 8px);
+        padding: 16px;
+        border-radius: $border-radius;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.2s linear;
+        &:nth-child(1) {
+          @include option-style(#e21b3c, #c01733);
+        }
+        &:nth-child(2) {
+          @include option-style(#1368ce, #1059af);
+        }
+        &:nth-child(3) {
+          @include option-style(#d89e00, #b88700);
+        }
+        &:nth-child(4) {
+          @include option-style(#26890c, #20750a);
+        }
+        &:nth-child(2n) {
+          margin-right: 0px;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: #ffffff00;
+          border-radius: $border-radius;
+          transition: background-color .2s linear,
+                      transform 0.05s linear;
+        }
+        &:hover::after {
+          background-color: #ffffff3a;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+        &:not(.start-quiz__options--choosable--chosen):not(.start-quiz__options--choosable--correct):disabled {
+          @include option-style(#474747, #757575);
+          pointer-events: none;
+          cursor: default;
+        }
+        &--chosen:disabled {
+          pointer-events: none;
+          cursor: default;
+          &::after {
+              background-color: #ffffff3a;
+          }
+        }
+        &--correct {
+          transform: scale(1.05);
+          pointer-events: none;
+          cursor: default;
+          &::before {
+              content: '';
+              background-image: url('../images/green-tick-mark.png');
+              background-size: 20px 20px;
+              position: absolute;
+              width: 20px;
+              height: 20px;
+              right: 10px;
+              top: 50%;
+              transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    &__footer {
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+}

@@ -44,6 +44,7 @@ $danger-color: #e55353;
 @import "./host-quiz.scss";
 @import "./quiz-ended.scss";
 @import "./scoreboard.scss";
+@import "./start-quiz.scss";
 
 .mdc-snackbar.snackbar-success {
   @include snackbar.fill-color($success-color);

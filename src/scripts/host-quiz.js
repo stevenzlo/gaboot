@@ -1,5 +1,6 @@
 const quiz = require('./quiz');
 const snackbar = require('./snackbar');
+const startQuiz = require('./start-quiz');
 const MDCChipSet = require('@material/chips').MDCChipSet;
 
 function makeId(length) {
@@ -43,7 +44,7 @@ function refreshHostedQuiz(quizId, deck) {
           'questions': doc.data()['questionsToInsert'],
           'activeQuestion': {
             'index': -1,
-            'timedOut': true
+            'timedOut': false
           }
         }).then(() => {
           const gamePin = document.querySelector('#game__pin');
@@ -96,6 +97,9 @@ function refreshHostedQuiz(quizId, deck) {
             } else {
               deck.slide(4);
             }
+          }
+          startButtonListener = () => {
+            startQuiz.startQuiz(quizId, gameId, deck);
           }
           deck.slide(8);
         });
