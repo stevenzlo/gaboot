@@ -19,6 +19,7 @@ var editQuiz = require('./edit-quiz');
 var snackbar = require('./snackbar');
 var hostQuiz = require('./host-quiz');
 var startQuiz = require('./start-quiz');
+var scoreboard = require('./scoreboard');
 
 const main = () => {
   snackbar.run();
@@ -49,6 +50,7 @@ const main = () => {
   editQuiz.run(deck);
   hostQuiz.run(deck);
   startQuiz.run();
+  scoreboard.init(deck);
 }
 
 export default main;

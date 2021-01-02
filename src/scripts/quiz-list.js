@@ -56,8 +56,8 @@ function refreshQuizList(querySnapshot, deck) {
       element.addEventListener('click', () => {
         const quizDeleteTitle = document.querySelector('#quiz__delete-title');
         quizDeleteTitle.innerHTML = element.dataset.title;
-        quizDeleteDialog.listen('MDCDialog:closing', function() {
-          if (firebase.auth().currentUser) {
+        quizDeleteDialog.listen('MDCDialog:closed', function(action) {
+          if (action.detail.action == 'delete' && firebase.auth().currentUser) {
             quiz.deleteQuiz(firebase.auth().currentUser.uid, element.dataset.id)
               .then(() => {
                 snackbar.openSnackbarMessage('Quiz deleted successfully.', 'success');

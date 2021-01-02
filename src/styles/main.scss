@@ -55,5 +55,8 @@ $danger-color: #e55353;
 @media (min-width: snackbar.$mobile-breakpoint) {
   .mdc-snackbar {
     @include snackbar.position-leading();
+    .mdc-snackbar__label {
+      font-size: 1.2em;
+    }
   }
 }
