@@ -54,77 +54,77 @@ function startQuiz(quizId, gameId, deck) {
     currentQuestionIndex = 0;
     timer = undefined;
     deck.slide(11);
-  });
-  const unsubscribeQuizDocRef = hostedQuizDocRef
-    .onSnapshot(doc => {
-      const startQuizInputQuestion = document.querySelector('#start-quiz__input--question');
-      const startQuizQuestionLeft = document.querySelector('#start-quiz__question-left');
-      const activeQuestion = doc.data().activeQuestion;
-      const quizEnded = !doc.data().started;
-      if (quizEnded) {
-          unsubscribeQuizDocRef();
-          unsubscribeQuizUserRef();
-      }
-      currentQuestionIndex = activeQuestion.index;
-      if (currentQuestionIndex >= 0 && currentQuestionIndex < doc.data()['questions'].length) {
-        startQuizInputQuestion.value = `${currentQuestionIndex+1}. ${doc.data()['questions'][currentQuestionIndex]['question']}`;
-        startQuizQuestionLeft.innerHTML = `${currentQuestionIndex + 1}/${doc.data()['questions'].length}`;
-        console.log(prevQuestionIndex, currentQuestionIndex);
-        if (prevQuestionIndex !== undefined && currentQuestionIndex !== prevQuestionIndex) {
-          prevQuestionIndex = currentQuestionIndex;
-          timer = doc.data()['questions'][currentQuestionIndex]['timer'] + 1;
-          nextButton.disabled = true;
-          timerInterval = setInterval(() => {
-            const startQuizTimer = document.querySelector('#start-quiz .start-quiz__timer');
-            if (timer > 0) {
-              timer--;
-              startQuizTimer.innerHTML = timer;
-            } else {
-              hostedQuizDocRef.update({
-                'activeQuestion': {
-                  'index': currentQuestionIndex,
-                  'timedOut': true
-                }
-              });
-              startQuizTimer.innerHTML = '-';
-              clearInterval(timerInterval);
-              nextButton.disabled = false;
-              nextButtonListener = () => {
+    const unsubscribeQuizDocRef = hostedQuizDocRef
+      .onSnapshot(doc => {
+        const startQuizInputQuestion = document.querySelector('#start-quiz__input--question');
+        const startQuizQuestionLeft = document.querySelector('#start-quiz__question-left');
+        const activeQuestion = doc.data().activeQuestion;
+        const quizEnded = !doc.data().started;
+        if (quizEnded) {
+            unsubscribeQuizDocRef();
+            unsubscribeQuizUserRef();
+        }
+        currentQuestionIndex = activeQuestion.index;
+        if (currentQuestionIndex >= 0 && currentQuestionIndex < doc.data()['questions'].length) {
+          startQuizInputQuestion.value = `${currentQuestionIndex+1}. ${doc.data()['questions'][currentQuestionIndex]['question']}`;
+          startQuizQuestionLeft.innerHTML = `${currentQuestionIndex + 1}/${doc.data()['questions'].length}`;
+          console.log(prevQuestionIndex, currentQuestionIndex);
+          if (prevQuestionIndex !== undefined && currentQuestionIndex !== prevQuestionIndex) {
+            prevQuestionIndex = currentQuestionIndex;
+            timer = doc.data()['questions'][currentQuestionIndex]['timer'] + 1;
+            nextButton.disabled = true;
+            timerInterval = setInterval(() => {
+              const startQuizTimer = document.querySelector('#start-quiz .start-quiz__timer');
+              if (timer > 0) {
+                timer--;
+                startQuizTimer.innerHTML = timer;
+              } else {
                 hostedQuizDocRef.update({
                   'activeQuestion': {
-                    'index': currentQuestionIndex + 1,
-                    'timedOut': false
+                    'index': currentQuestionIndex,
+                    'timedOut': true
                   }
                 });
+                startQuizTimer.innerHTML = '-';
+                clearInterval(timerInterval);
+                nextButton.disabled = false;
+                nextButtonListener = () => {
+                  hostedQuizDocRef.update({
+                    'activeQuestion': {
+                      'index': currentQuestionIndex + 1,
+                      'timedOut': false
+                    }
+                  });
+                }
               }
-            }
-          }, 1000);
+            }, 1000);
+          }
+          showCurrentOptions(doc.data()['questions'][currentQuestionIndex]['options']);
+          hostedQuizDocRef.collection('user').get().then((querySnapshot) => {
+            updateTotalAnswer(querySnapshot);
+          })
+          if (activeQuestion.timedOut) {
+            showCorrectAnswer(doc.data()['questions'][currentQuestionIndex]['correctAnswer']);
+          } else {
+            resetOptions();
+          }
         }
-        showCurrentOptions(doc.data()['questions'][currentQuestionIndex]['options']);
-        hostedQuizDocRef.collection('user').get().then((querySnapshot) => {
-          updateTotalAnswer(querySnapshot);
-        })
-        if (activeQuestion.timedOut) {
-          showCorrectAnswer(doc.data()['questions'][currentQuestionIndex]['correctAnswer']);
+        if (currentQuestionIndex >= doc.data()['questions'].length - 1) {
+          nextButton.innerHTML = 'Finish';
+          nextButtonListener = () => {
+            hostedQuizDocRef.update({
+              'started': false
+            });
+            scoreboard.run(deck, firebase, gameId);
+            deck.slide(10);
+          }
         } else {
-          resetOptions();
+          nextButton.innerHTML = 'Next';
         }
-      }
-      if (currentQuestionIndex >= doc.data()['questions'].length - 1) {
-        nextButton.innerHTML = 'Finish';
-        nextButtonListener = () => {
-          hostedQuizDocRef.update({
-            'started': false
-          });
-          scoreboard.run(deck, firebase, gameId);
-          deck.slide(10);
-        }
-      } else {
-        nextButton.innerHTML = 'Next';
-      }
-    }, error => {
-      console.error(error);
-  })
+      }, error => {
+        console.error(error);
+    })
+  });
 }
 
 function showCurrentOptions(options) {

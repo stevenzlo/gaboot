@@ -110,7 +110,7 @@ function createListPreviewQuestion(newQuestion) {
     li.classList.add('create-quiz__list__item');
     li.innerHTML = `
         <div class="create-quiz__list__item--left">
-            <p>${newQuestion.number}</p>
+            <p>${newQuestion.number + 1}</p>
             <img id="create-quiz__list__item--left__delete" src="https://i.imgur.com/etf85Lw.png" alt="Delete">
         </div>
         <div class="create-quiz__list__item--right">

@@ -18,6 +18,7 @@ function run(deck, firebase) {
     const unsubscribe = hostedQuizDocRef
         .onSnapshot(snapshot => {
             const activeQuestion = snapshot.data().activeQuestion;
+            const correctAnswerIndex = snapshot.data().questions[activeQuestion.index].correctAnswer;
             const quizEnded = !snapshot.data().started;
             if (quizEnded) {
                 deck.slide(9);
@@ -31,7 +32,7 @@ function run(deck, firebase) {
                 enableAnswerChoosing(firebase);
             } else {
                 disableAnswerChoosing();
-                showCorrectAnswer(currentQuestionIndex);
+                showCorrectAnswer(correctAnswerIndex);
             }
         }, error => {
             console.error(error);
