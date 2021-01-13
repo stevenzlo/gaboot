@@ -612,3 +612,67 @@ Yang akan dikerjakan besok:
 - Menyelesaikan masalah tombol aksi pada pop up konfirmasi penghapusan
 Masalah yang dihadapi:
 - -
+
+Hari ke-2 (2 Januari 2020):
+Richard:
+Yang dikerjakan hari ini:
+- Membuat tampilan scoreboard
+- Menampilkan scoreboard dengan data dari database
+- Memperbaiki bug pada halaman pembuatan kuis
+- Memperbaiki bug pada halaman pengeditan kuis
+- Mengetes web app
+Yang akan dikerjakan besok:
+- -
+Masalah yang dihadapi:
+- -
+
+Steven:
+Yang dikerjakan hari ini:
+- Membuat halaman memulai kuis
+- Mengubah flow login menjadi pop up
+- Menyelesaikan masalah tombol aksi pada pop up konfirmasi penghapusan
+Yang akan dikerjakan besok:
+- -
+Masalah yang dihadapi:
+- -
+
+Sprint Review
+Interasi ke-5:
+1. Mengadakan kuis (done)
+Sebagai seorang pembuat kuis, saya dapat mengadakan kuis yang telah saya buat sehingga pengambil kuis dapat menjadi partisipan kuis tersebut
+Definition of done:
+- Terdapat halaman untuk mengadakan kuis (done)
+- Ketika kuis diadakan, pengambil kuis dapat masuk ke dalam ruangan tunggu kuis (done)
+- Kuis ditandai sebagai sedang diadakan di database (done)
+Member: Richard, Steven
+
+2. Memulai kuis (done)
+Sebagai seorang pembuat kuis, saya dapat memulai kuis yang telah diadakan sehingga saya dapat merekam jawaban yang diberikan oleh pengambil kuis terhadap pertanyaan-pertanyaan yang ada
+Definition of done:
+- Terdapat halaman untuk memulai kuis (done)
+- Terdapat halaman untuk menampilkan pertanyaan, pilihan, dan timer saat kuis berlangsung (done)
+- Terdapat halaman untuk memilih jawaban saat kuis berlangsung (done)
+- Kuis menampilkan jawaban yang benar ketika waktu memilih jawaban telah habis (done)
+- Kuis ditandai sebagai telah dimulai di database (done)
+Member: Steven
+
+3. Melihat peringkat (done)
+Sebagai seorang pembuat kuis, saya dapat menampilkan peringkat pengambil kuis sehingga suasana kompetitif saat kuis diambil tercipta
+Definition of done:
+- Terdapat halaman untuk menunjukkan peringkat saat kuis berlangsung dan berakhir (done)
+- Sistem merekam jawaban dan poin-poin pengambil kuis di database (done)
+Member: Richard
+
+4. Input title dan deskripsi (done)
+Sebagai seorang pembuat kuis, saya dapat mengisi title dan deskripsi agar pada daftar kuis, dapat dibedakan antara satu dengan yang lainnya.
+Definition of done:
+- Terdapat pop up untuk meminta title dan deskripsi saat selesai membuat kuis (done)
+- Title dan deskripsi disimpan dengan baik di database (done)
+Member: Richard
+
+5. Tombol aksi 'Delete' pada konfirmasi Hapus Kuis (done)
+Sebagai seorang pembuat kuis, saya dapat memilih untuk batal menghapus kuis sehingga proses penghapusan kuis hanya dijalankan saat saya memilih tombol 'Delete'
+Definition of done:
+- Terdapat pop up konfirmasi penghapusan kuis (done)
+- Penghapusan kuis dari database hanya dijalankan apabila tombol aksi 'Delete' dipilih (done)
+Member: Steven
