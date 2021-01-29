@@ -676,3 +676,5 @@ Definition of done:
 - Terdapat pop up konfirmasi penghapusan kuis (done)
 - Penghapusan kuis dari database hanya dijalankan apabila tombol aksi 'Delete' dipilih (done)
 Member: Steven
+
+Baru
